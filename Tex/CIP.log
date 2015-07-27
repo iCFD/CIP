@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2015.7.14)  28 JUL 2015 05:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2015.7.14)  28 JUL 2015 05:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -210,25 +210,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-(./CIP.bbl [3]) [4] (./CIP.aux) ) 
+[3] (./CIP.bbl) [4] (./CIP.aux) ) 
 Here is how much of TeX's memory you used:
- 1668 strings out of 493485
- 19402 string characters out of 3143526
+ 1680 strings out of 493485
+ 19594 string characters out of 3143526
  72748 words of memory out of 3000000
- 4974 multiletter control sequences out of 15000+200000
+ 4986 multiletter control sequences out of 15000+200000
  12729 words of font info for 52 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 27i,10n,22p,676b,277s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,10n,22p,676b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
@@ -245,7 +245,7 @@ c/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.p
 fb>
-Output written on CIP.pdf (4 pages, 179546 bytes).
+Output written on CIP.pdf (4 pages, 180509 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

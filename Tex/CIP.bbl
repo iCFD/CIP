@@ -1,15 +1,16 @@
 \begin{thebibliography}{}
 
-\bibitem[\protect\astroncite{Groppi et~al.}{2014}]{Groppi2014}
-Groppi, M., G.~Russo, and G.~Stracquadanio\leavevmode\nopagebreak\newline 2014.
-\newblock High order semi-lagrangian methods for the bgk equation.
-\newblock {\em arXiv preprint arXiv:1411.7929}.
-
 \bibitem[\protect\astroncite{Ii and Xiao}{2007}]{LiXiao2007}
 Ii, S. and F.~Xiao\leavevmode\nopagebreak\newline 2007.
 \newblock Cip/multi-moment finite volume method for euler equations: a
   semi-lagrangian characteristic formulation.
 \newblock {\em Journal of Computational Physics}, 222(2):849--871.
+
+\bibitem[\protect\astroncite{Ii and Xiao}{2009}]{LiXiao2009}
+Ii, S. and F.~Xiao\leavevmode\nopagebreak\newline 2009.
+\newblock High order multi-moment constrained finite volume method. part i:
+  Basic formulation.
+\newblock {\em Journal of Computational Physics}, 228(10):3669--3707.
 
 \bibitem[\protect\astroncite{Nakamura et~al.}{2001}]{Nakamura2001}
 Nakamura, T., R.~Tanaka, T.~Yabe, and
@@ -17,5 +18,30 @@ Nakamura, T., R.~Tanaka, T.~Yabe, and
 \newblock Exactly conservative semi-lagrangian scheme for multi-dimensional
   hyperbolic equations with directional splitting technique.
 \newblock {\em Journal of Computational Physics}, 174(1):171--207.
+
+\bibitem[\protect\astroncite{Xiao}{2004}]{Xiao2004}
+Xiao, F.\leavevmode\nopagebreak\newline 2004.
+\newblock Unified formulation for compressible and incompressible flows by
+  using multi-integrated moments i: one-dimensional inviscid compressible flow.
+\newblock {\em Journal of Computational Physics}, 195(2):629--654.
+
+\bibitem[\protect\astroncite{Xiao and Yabe}{2001}]{Xiao2001}
+Xiao, F. and T.~Yabe\leavevmode\nopagebreak\newline 2001.
+\newblock Completely conservative and oscillationless semi-lagrangian schemes
+  for advection transportation.
+\newblock {\em Journal of computational physics}, 170(2):498--522.
+
+\bibitem[\protect\astroncite{Yabe and Aoki}{1991}]{Yabe1991}
+Yabe, T. and T.~Aoki\leavevmode\nopagebreak\newline 1991.
+\newblock A universal solver for hyperbolic equations by cubic-polynomial
+  interpolation i. one-dimensional solver.
+\newblock {\em Computer Physics Communications}, 66(2):219--232.
+
+\bibitem[\protect\astroncite{Yabe et~al.}{2001}]{Yabe2001}
+Yabe, T., R.~Tanaka, T.~Nakamura, and F.~Xiao\leavevmode\nopagebreak\newline
+  2001.
+\newblock An exactly conservative semi-lagrangian scheme (cip-csl) in one
+  dimension.
+\newblock {\em Monthly Weather Review}, 129(2):332--344.
 
 \end{thebibliography}

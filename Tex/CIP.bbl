@@ -1,0 +1,21 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Groppi et~al.}{2014}]{Groppi2014}
+Groppi, M., G.~Russo, and G.~Stracquadanio\leavevmode\nopagebreak\newline 2014.
+\newblock High order semi-lagrangian methods for the bgk equation.
+\newblock {\em arXiv preprint arXiv:1411.7929}.
+
+\bibitem[\protect\astroncite{Ii and Xiao}{2007}]{LiXiao2007}
+Ii, S. and F.~Xiao\leavevmode\nopagebreak\newline 2007.
+\newblock Cip/multi-moment finite volume method for euler equations: a
+  semi-lagrangian characteristic formulation.
+\newblock {\em Journal of Computational Physics}, 222(2):849--871.
+
+\bibitem[\protect\astroncite{Nakamura et~al.}{2001}]{Nakamura2001}
+Nakamura, T., R.~Tanaka, T.~Yabe, and
+  K.~Takizawa\leavevmode\nopagebreak\newline 2001.
+\newblock Exactly conservative semi-lagrangian scheme for multi-dimensional
+  hyperbolic equations with directional splitting technique.
+\newblock {\em Journal of Computational Physics}, 174(1):171--207.
+
+\end{thebibliography}

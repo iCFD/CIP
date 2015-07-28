@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CIP.aux
 The style file: humannat.bst
 Database file #1: CIP.bib.bib
-You've used 7 entries,
+You've used 10 entries,
             2155 wiz_defined-function locations,
-            555 strings with 5184 characters,
-and the built_in function-call counts, 2956 in all, are:
-= -- 298
-> -- 98
-< -- 5
-+ -- 38
-- -- 34
-* -- 285
-:= -- 503
-add.period$ -- 21
-call.type$ -- 7
-change.case$ -- 52
-chr.to.int$ -- 7
-cite$ -- 7
-duplicate$ -- 98
-empty$ -- 213
-format.name$ -- 49
-if$ -- 566
+            578 strings with 5628 characters,
+and the built_in function-call counts, 4156 in all, are:
+= -- 416
+> -- 144
+< -- 6
++ -- 56
+- -- 50
+* -- 400
+:= -- 712
+add.period$ -- 30
+call.type$ -- 10
+change.case$ -- 75
+chr.to.int$ -- 10
+cite$ -- 10
+duplicate$ -- 140
+empty$ -- 296
+format.name$ -- 70
+if$ -- 794
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 7
-newline$ -- 38
-num.names$ -- 21
-pop$ -- 33
+missing$ -- 10
+newline$ -- 53
+num.names$ -- 30
+pop$ -- 49
 preamble$ -- 1
-purify$ -- 52
+purify$ -- 75
 quote$ -- 0
-skip$ -- 76
+skip$ -- 107
 stack$ -- 0
-substring$ -- 269
-swap$ -- 14
+substring$ -- 360
+swap$ -- 20
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 42
+type$ -- 60
 warning$ -- 0
-while$ -- 28
+while$ -- 39
 width$ -- 0
-write$ -- 93
+write$ -- 132

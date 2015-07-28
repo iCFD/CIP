@@ -9,27 +9,67 @@
 \setlength{\topmargin}{-0.75in}		% Top margin of 2 in -0.75 in = 1 in
 \setlength{\textheight}{9.2in} 		% Lower margin of 11 in - 9 in - 1 in = 1 in
 
+% For Theorems and Definitions
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 
-\renewcommand{\baselinestretch}{1.5} % 1.5 denotes double spacing. Changing it will change the spacing
+% Manuel's Macros
+\renewcommand{\u}{\boldsymbol{\upsilon}} % for vector upsilon
+\newcommand{\p}{\boldsymbol{p}} 		% for vector p
+\renewcommand{\r}{\boldsymbol{r}} 		% for vector r
+\newcommand{\x}{\boldsymbol{x}} 		% for vector x
+\renewcommand{\c}{\boldsymbol{c}} 		% for vector c
+\newcommand{\vecxi}{\boldsymbol{\xi}}	% for vector xi
+\DeclareMathOperator{\Sample}{Sample}
+\let\vaccent=\v % rename builtin command \v{} to \vaccent{}
+\renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
+\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}} 
+% for vectors of Greek letters
+\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}} % for unit vector
+\newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
+\newcommand{\avg}[1]{\left< #1 \right>} % for average
+\let\underdot=\d % rename builtin command \d{} to \underdot{}
+\renewcommand{\d}[2]{\frac{d #1}{d #2}} % for derivatives
+\newcommand{\dx}[1]{\frac{d}{d #1}} % for derivatives without specifying the derived function
+\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for double derivatives
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}} 
+% for partial derivatives
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}} 
+% for double partial derivatives
+\newcommand{\pdc}[3]{\left( \frac{\partial #1}{\partial #2}
+ \right)_{#3}} % for thermodynamic partial derivatives
+\newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
+\newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
+\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|
+ \left. #2 \vphantom{#1} \right>} % for Dirac brackets
+\newcommand{\matrixel}[3]{\left< #1 \vphantom{#2#3} \right|
+ #2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
+\newcommand{\grad}[1]{\gv{\nabla} #1} % for gradient
+\newcommand{\gradx}[2]{\gv{\nabla}_{#2} #1} % for gradient
+\let\divsymb=\div % rename builtin command \div to \divsymb
+\renewcommand{\div}[1]{\gv{\nabla} \cdot #1} % for divergence
+\newcommand{\divx}[2]{\gv{\nabla}_{#2} \cdot #1} % for divergence v2
+\newcommand{\curl}[1]{\gv{\nabla} \times #1} % for curl
 
-\setlength{\parindent}{0in} 
+% Spacing and Indentation
+\renewcommand{\baselinestretch}{1.5} % 1.5 denotes double spacing. Changing it will change the spacing
+%\setlength{\parindent}{0in} 
 
 %%%%%%%%%%%%%%%%%%%
 % Document begins!
 %%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\title{Conservative Constrained Interpolating Polynomials}
-\author{Oleg Kravchenko* \& Manuel Diaz\textsuperscript{1} \\ 
-\small * Department of Nuclear Physics, University of Examples, Moscow, Russia. \\[-3mm]
-\small \textsuperscript{1} Institute of Applied Mechanics, National Taiwan University, Taiwan R.O.C.}
+\title{Conservative Semi-Lagrangian Reconstructions}
+\author{Oleg Kravchenko\textsuperscript{1} \& Manuel Diaz* \\ 
+\small \textsuperscript{1} Department of Nuclear Physics, University of Examples, Moscow, Russia. \\[-3mm]
+\small * Institute of Applied Mechanics, National Taiwan University, Taiwan R.O.C.}
 \date{\today}
 
 \maketitle
 
-\abstract{This a sample \LaTeX document that explains some of the \LaTeX commands}
+\abstract{A class of high-order constrained reconstructions, in the context of finite difference methods for scalar hyperbolic conservation laws, are presented and numerically studied in the presence of local extrema, or shock solutions.
+Although these reconstructions can use large time steps given their semi-Lagrangian in nature, a conservative formulation of the conservation is here considered. The numerical one-dimensional implementations in Matlab are reported to provide a simple follow up of the formulations here versed. Application to the nonlinear Boltzmann-BGK equation to model the dynamics of inert gas flows in near continuum regimes are explored.}
 
 \section{Introduction}
 
@@ -44,95 +84,169 @@
 %
 
 % Constext of the problem/challenge/idea
-\LaTeX \; is a markup language designed and implemented by \textbf{Leslie Lamport}, based on \textbf{Donald E. Knuth}'s typesetting language \TeX.  The markup in the source file of a \LaTeX \; document my appear somewhat challenging, but the compiled result of the document is certainly a pleasing rendering of the mark-up material. \cite{Yabe1991}, \cite{Yabe2001}, \cite{LiXiao2007}, \cite{Nakamura2001}, \cite{LiXiao2009}, \cite{Xiao2001}, \cite{Xiao2004}.
+The semi-Lagrangian method is a numerical solution technique for the partial differential equations describing the advection process. It accounts for the Lagrangian nature of the transport process but, at the same time, it allows to work on a fixed computational grid. Starting from the first proposals to in the meteorological literature, which focused on the advection of vorticity in simplified models of large scale flow, it has developed into a mature discretization approach for the complete equations of atmospheric flows. The semi-Lagrangian is also related (and, in some cases, entirely equivalent) to similar methods developed in other modelling communities, such as for example the modified method of characteristics, the Eulerian-Lagrangian method, the characteristic Galerkin method and the constrained interpolation polynomial methods. This last, have been proved to achieve excellent results for scalar conservation laws.
+%
+% I'll change the above. I took it from: http://www1.mate.polimi.it/~bonavent/Homepage_Luca_file/lezlag000.pdf
 
 % What has been done?
-\LaTeX \; was built on \TeX 's foundation.  An article is divided into \emph{logical units}, including an abstract, various sections and subsections, theorems, and a bibliography.  The logical units are typed independently of one another.  Once all the units have been typed, \LaTeX \, controls the \emph{placement} and \emph{formating} of these elements. \LaTeX \; automatically numbers the sections, theorems, and equations in your article, and builds the cross-references.  If any changes is made to the article, it automatically renumbers its various parts and rebuilds the cross-references.\\
+Much work has been done in the text of semi-lagrangian constrained reconstructions with polynomials, here we point some of our observations:
+\begin{itemize}
+	\item \cite{Yabe1991} introduced the initial concept of cubic interpolation polynomial (CIP) for the evolution of scalar advection equations considering the also the evolution of the cell averages slope information. This simple idea has been proved to be workable but conservation cannot be guaranteed.
+	\item Two years later \cite{Yabe2001}, introduced a new reformulation of their CIP algorithm which now considers the cell numerical-mass conservation as a constrain and a reconstruction of a flux as and integral function is introduced in this semi-Lagrangian formulation.
+	\item Conservative formulation of CIP methods where first introduced by \cite{Tanaka2000} and \cite{Xiao2001}.
+	\item Extention to multi-dimensional formulation of the CIP algorithms where reported by \cite{Nakamura2001}.
+\end{itemize}
 
-% What the solution procedure?
-\emph{Packages} are extensions of \LaTeX.  \LaTeX \; commands, as a rule, start with a backslash (\textbackslash) and tells \LaTeX  to do something special. For example, in the instruction\\
-\verb+\emph{instructions to \LaTeX} +, \verb+\emph+ is a \LaTeX \; command. Another kind of instruction is called an \emph{environment}. For example, the commands \verb+\begin{flushright}+ and \verb+\end{flushright}+ enclose a \verb+flushright+ environment---texts that are typed inside this environment are right justified (lined up against the right margin) when typeset.
+% What the solution procedure/proposal?
+It is interesting to point out the conceptual similarities of CIP-CSL schemes in \cite{LiXiao2007} with the \emph{flux reconstruction} (FR) schemes by \cite{Huynh2007}. As both formulation achieve successfully high-order and accurate representations. However a clear advantage of the CIP-CSL is the simple incorporation of slope limiters in to the formulation which in the context of FR schemes breaks the abstraction of correction functions. Moreover, although their success the numerical experience of these methods reveals that both implementations require bast computational resources as their stability conditions can only allow small time steps. 
+The above is also result of the fact that CIP-CSL and FR are closer to an Eulerian description of flow conditions, see for example \cite{LiXiao2009}.
+
+It is found that CIP literature is rich in ideas and strategies to ensure the conservative properties of the method, improve their accuracy or deal with the oscillations that arise near local extrema. We notice that CIP implementation with rational functions by \cite{Xiao1996}. Here the use of such function instead of polynomials led to limiter free CIP second-order implementation that can deal with discontinuities in the solution in a straight manner. This observation resonates with the \emph{local dual logarithmic reconstructions} (LDLR) by \cite{Artebrant2006}. Which led us to consider a non-polynomial reconstructions to formulate new semi-Lagrangian reconstruction that can handle discontinuities that arise with the solutions in a much straight and computationally economic manner.
 
 % How is this document organized?
+The present document is , section \ref{sec:CIP} introduces the basic formulation of CIP by \cite{Yabe1991}, followed by its modification to a fully conservative semi-Lagrangian scheme in section \ref{sec:CIP-CSL}. In section \ref{sec:CInonP-CSL} the concept of constrained interpolation is considered with a non-polynomial function. Lastly, some concluding remarks are given section \ref{sec:Conclusions}.
+
+\section{Constrained Interpolation Polynomials}
+\label{sec:CIP}
+
+Consider a scalar conservation law of the form
+%
+\begin{equation}
+	%
+	\pd{f}{t} + \upsilon \pd{f}{x} = 0, 
+	\quad\text{for } x\in\Omega\in\mathbb{R},t\geqslant0, 
+	\label{eq:scalarTransport}
+	%
+\end{equation}
+%
+where $f:f(x,t)$ indicates a scalar field define in the domain $\Omega$ and to be transported in time. $\upsilon(x,t)\in\mathbb{R}$ is the characteristic advection speed. Let us now consider denote $g=\pd{f}{x}$ as the slope of the scalar field $f$. 
+
+Taking the derivative of equation (\ref{eq:scalarTransport}) with respect to $x$ yields
+%
+\begin{equation}
+	%
+	\pd{}{x}\left(\pd{f}{t} + \upsilon \pd{f}{x}\right) = 
+	\pd{}{x}\left(\pd{f}{t} \right) + 
+	\pd{\upsilon}{x} \left( \pd{f}{x} \right) + 
+	\upsilon \pd{}{x} \left( \pd{f}{x} \right) = 0,
+	%
+\end{equation}
+%
+under the assumption of a constant velocity field $\upsilon$, the above result simply reduces to 
+% 
+\begin{equation}
+	%
+	\pd{g}{t} + \upsilon \pd{g}{x} = 0
+	\label{eq:slopeTransport}
+	%
+\end{equation}
+%
+if both values of $f$ and $g$ are given at the cell boundaries, the profile of every cell can be reconstructed by an interpolation using a cubic polynomial 
+%
+\begin{equation}
+	%
+	F(x) = a \left(x-x_{i-\frac{1}{2}} \right)^3 + 
+		   b \left(x-x_{i-\frac{1}{2}} \right)^2 + 
+		   c \left(x-x_{i-\frac{1}{2}} \right) + d
+	%
+\end{equation}
+%
+where $a$, $b$, $c$ and $d$ are to be defined under the constrains 
+%
+\begin{align}
+	%
+	F(x_{i-\frac{1}{2}}) = f_{i-\frac{1}{2}}, \\
+	F(x_{i+\frac{1}{2}}) = f_{i+\frac{1}{2}}, \\
+	\pd{F}{x}|_{x_{i-\frac{1}{2}}} = g_{i-\frac{1}{2}}, \\
+	\pd{F}{x}|_{x_{i+\frac{1}{2}}} = g_{i+\frac{1}{2}}, \\
+	F(x_i) = f(x_i) = f_i, \\
+	\pd{F}{x}|_{x_i} = g(x_i) = g_i,
+	%
+\end{align}
+% 
+however notice that under the following constrains the present scheme cannot guarantee conservation of cell average quantities $f_i$.
+
+\section{Conservative semi-Lagrangian Constrained Interpolation Polynomials}
+\label{sec:CIP-CSL}
+
+Consider a scalar conservation law of the form
+%
+\begin{equation}
+	%
+	\pd{f}{t} + \pd{(\upsilon f)}{x} = 0, 
+	\quad\text{for } x\in\Omega\in\mathbb{R},t\geqslant0, 
+	\label{eq:scalarTransport2}
+	%
+\end{equation}
+%
+where $f:f(x,t)$ indicates a scalar field define in the domain $\Omega$ and to be transported in time. $\upsilon(x,t)\in\mathbb{R}$ is the characteristic advection speed. Let us now consider denote $h=\int f\,dx$ and integrated scalar field of $f$.
+
+Integrating equation (\ref{eq:scalarTransport}) with respect to $x$ yields
+%
+\begin{equation}
+	%
+	\int \left(\pd{f}{t} + \pd{(\upsilon f)}{x}\right) dx = 
+	\pd{}{t} \int f dx + 
+	\int  \pd{(\upsilon f)}{x} dx = 0
+	%\pd{}{t} \int f dx + 
+	%\int f \pd{\upsilon}{x} dx + \int \upsilon \pd{f}{x} dx = 0
+	%
+\end{equation}
+%
+under the assumption of a constant velocity field $\upsilon$, the above result simply reduces to 
+% 
+\begin{equation}
+	%
+	\pd{h}{t} + \upsilon \pd{h}{x} = 0
+	\label{eq:integralTransport}
+	%
+\end{equation}
+%
+since both equations (\ref{eq:scalarTransport}) and (\ref{eq:integralTransport}) are the same, the CIP procedure is applied to the pair $\int f dx$ and $f$ instead of $f$ and $\pd{f}{x}$. Using this analogy,  $h$ is defined as continuous function defined in the physical space of every cell as 
+%
+\begin{equation}
+	%
+	h(x) = \int_{x_{i-\frac{1}{2}}}^{x} f(\xi) d\xi,
+	%
+\end{equation}
+%
+The profile of every cell can be reconstructed by an interpolation using a cubic polynomial of the form
+%
+\begin{equation}
+	%
+	h(x) = a \left(x-x_{i-\frac{1}{2}} \right)^3 + 
+		   b \left(x-x_{i-\frac{1}{2}} \right)^2 + 
+		   c \left(x-x_{i-\frac{1}{2}} \right) 
+	%
+\end{equation}
+%
+where $a$, $b$ and $c$ are to be defined under the constrains 
+%
+\begin{align}
+	%
+	h(x_{i-\frac{1}{2}}) &= 0, \\
+	h(x_{i+\frac{1}{2}}) &= \bar{f}_i \Delta x, \\
+	\pd{h}{x}|_{x_{i-\frac{1}{2}}} &= f_{i-\frac{1}{2}}, \\
+	\pd{h}{x}|_{x_{i+\frac{1}{2}}} &= f_{i+\frac{1}{2}}, \\
+	\pd{h}{x}|_{x_i} = &f(x_i) = f_i, 
+	%
+\end{align}
+%
+notice that $\bar{f_i}$ denotes the cell average and should not be confused with point value $f_i$. The cell average is here defined as,
+%
+\begin{equation}
+	%
+	\frac{1}{\Delta x_i} \int_{x_{i-\frac{1}{2}}}^{x_{i+\frac{1}{2}}} f^{n} dx = \bar{f_i^n}.
+	%
+\end{equation}
+
+\section{Conservative semi-Lagrangian Constrained Interpolation non-Polynomials}
+\label{sec:CInonP-CSL}
 
 
-\section{Typing Text}
-The following keys are used to type text in a \LaTeX \; source file: 
-\begin{center}
-   \begin{verbatim}
-         a-z  A-Z  0-9
-         +  =  *  /  ( )  [ ]
-   \end{verbatim}
-\end{center}
-You may also use the following punctuation marks:
-\begin{center}
-   \begin{verbatim}
-     ,  ;  .  ?  !  :  `  '  -
-   \end{verbatim}
-\end{center}
-and the spacebar, and the Return (or Enter) key.\\
-
-There are thirteen special keys that are mostly used in \LaTeX \; instructions:
-\begin{center}
-   \begin{verbatim}
-      #  $  %  &  ~  _  ^  \  { }  @  "  |
-   \end{verbatim}
-\end{center}
-If you need to use them in your document, there  are commands available for typesetting these special characters. For example, \$ is typed as \verb+\$+, the underscore (\_) is typed as \verb+\_+, and \% is typed as \verb+\%+, whereas \"{a} is typed as \verb+\"{a}+, and @ is simply typed \verb+@+.\\
-
-In a \LaTeX \; source file, each \emph{comment} line begins with \%. \LaTeX \;  will ignore everything on the line after the \% character. \\
-
-The \emph{document class}, declared by the command \verb+\documentclass{..}+, in a \LaTeX \; source file controls how the document will be formatted. \LaTeX, by default, fully justifies the text by placing a certain size space between words---the \emph{interword space}---and a somewhat larger space between sentences--the \emph{intersentence space}.  To force an interword space, you can use the \verb+\+$_{\sqcup}$ command (the $_{\sqcup}$ symbol indicates a blank space). The \~ \, (tilde) command also forces an interword space, but with a difference: it keeps words together on the same line.  It is called a ``tie'' or ``non-breakable space.''\\
-
-When \LaTeX \; encounters a period, it must decide whether or not it indicates the end of a sentence. It uses the following rule: A period following a capital letter (e.g., A.) is interpreted as being part of an abbreviation or an initial and will be followed by an interword space; otherwise, it signifies the end of a sentence and will be followed by an intersentence space.  If this rule causes problems in your document, you can follow the period with  \verb+\+$_{\sqcup}$ to force an interword space, or precede the period with \verb+\@+ to force an intersetence space.\\
-
-In a \LaTeX \; document source file, left double quotes are typed a \verb+` `+ (two left single quotes) and right double quotes are type as \verb+' '+ (two right single quotes). The left single quote key is usually in the upper-left or upper-right corner of the keyboard, and shares a key with the tilde (\verb+~+) key.\\
-
-In a \LaTeX \; command that requires an argument, the argument follows the name of the command and is placed between \{ and \}. Command names are \emph{case sensitive}. The command \verb+\\+ (\verb+\newline+ is another form) breaks a line. You can use the \verb+\\+ command and specify an appropriate amount of vertical space, for example \verb+\\[1in]+. Note that this command uses \emph{square brackets} rather than braces because the argument  is \emph{optional}. The distance/spacing may be given in points(pt), centimenters(cm), or inches(in).  To force a page break, use \verb+\newpage+. 
-
-\section{Typing Math}
-In addition to the keys listed above, you need the keys \verb+|, <+, and \verb+>+ to type mathematical formulas. (\verb+|+ is the shifted \verb+\+ key on many keyboards). \\
-
-There are two kinds of math formulas and environments:
-\begin{enumerate}
-   \item \emph{Inline math environments} open and close with \$ or open with \verb+\(+ and close with \verb+\)+.
-   \item \emph{Displayed math environments} open with \verb+\[+ and close with \verb+\]+.  Other forms of the displayed 
-         environment are \verb+\begin{equation*} ... \end{equation*}+ and\\
-          \verb+\begin{equation} ... \end{equation}+. 
-\end{enumerate}
-Within the math environment, \LaTeX uses its own spacing rules and completely ignores the number of white spaces typed with two exceptions:
-\begin{enumerate}
-  \item Spaces that delimit commands (e.g., in \verb+$\infty a$+, the space is not ignored; in fact, \verb+\inftya$+ is 
-        an error)
-  \item Spaces in the arguments of commands that temporarily revert to text mode (\verb+\mbox+ and \verb+\text+ are such commands).
-\end{enumerate}
-In text mode, many spaces equal one space; whereas, in math mode, spaces are ignored (unless they terminate a command). To asjust the spacing in a typeset document, use a spacing command. The same formula may be typeset differently depending on whether it is inline or display. For example, $\sum_{i=1}^{n} i^{2}$ is inline math.  The following is the same expression as displayed math
-\[
-  \sum_{i=1}^{n} i^{2}.
-\]
-Math symbols are invoked by commands inside a math formula or environment. The math symbols are organized into tables in Appendix A of textbook. Some commands (e.g. \verb+\sqrt+) need arguments enclosed in braces (\{ and \}).  For example, to typeset $\sqrt{x^{2} y^{2}}$, type \verb+$\sqrt{x^{2} y^{2}}$+. To typeset $\sqrt[n]{x^{2} y^{2}}$, type \verb+$\sqrt[n]{x^{2} y^{2}}$+. Some commends need more than one arguments.  For example to typeset 
-\[
-   \frac{\sin x}{\cos^{2} x + \tan x}
-\]
-type 
-\begin{verbatim}
-\[
-   \frac{\sin x}{\cos^{2} x + \tan x}
-\]
-\end{verbatim}
-\verb+\frac+ is the command; $\sin x$ and $\cos^{2} x + \tan x$ are the arguments.\\
-
-\begin{theorem}
-  This is the Pythagorean Theorem. It says
-  \begin{equation}
-    x^{2}+y^{2}=z^{2}.
-  \end{equation}
-\end{theorem}
-\begin{definition}
-Earth is where life is possible.
-\end{definition}
 
 \section{Concluding Remarks}
+\label{sec:Conclusions}
 
 % Begin the Bibliography
 \bibliographystyle{humannat}

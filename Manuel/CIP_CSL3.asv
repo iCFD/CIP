@@ -24,7 +24,7 @@ clear; %close all; clc;
 %% Parameters
 fluxfun = 'linear'; 
     cfl = 0.20;	% CFL condition.
-   tEnd = 1;	% final time.
+   tEnd = 2;	% final time.
      nx = 201;	% number of nodes.
  scheme = 3;	% {3}CSL3.
     
@@ -108,30 +108,23 @@ while t < tEnd
     
 	
     % flux of mass across cell boundaries
-    g = - min(0, xi(R)) .*(uo + c1.*xi(R)/2 + c2.*xi(R).^2/3 + c3.*xi(R).^3/4) - ...
-        max(0, xi(L)) .* (uo + c1.*xi(L)/2 + c2.*xi(L).^2/3 + c3.*xi(L).^3/4); 
+    g = - min(0, xi) .*(uo + c1.*xi/2 + c2.*xi.^2/3 + c3.*xi.^3/4) + ; 
     
     % BCs and update
-%     u_tilde = [F(nx-1),F];
+    u_tilde = [F(nx-1),F];
     %u_tilde = [F(nx-2),F,F(1)];
-    u_tilde = F;
-    
     
     % non-Advection step
-    u = u_tilde - 0.5*(dt/dx)*(v-v).*u_tilde;    
-    % BC
-    u(1) = u_tilde(end);
+    u = u_tilde-dt*(v-v)/(2*dx)*u_tilde;
 
     % Increment time
     t=t+dt;
     
     % Plot u
-    if rem(it,1)==0
-        figure(2); plot(x,u,'ob-'); axis(plotrange); grid on; drawnow;
-%         plot(x,CommonIC(x-t,9),'-k',x,u,'ob-'); 
+    if rem(it,5)==0
+        figure(2); plot(x,u,'ob'); axis(plotrange); grid on; drawnow;
     end
 end 
 
 % Post-Process
-ue = CommonIC(mod(x - t, .5),9); % exact solution in final time step
-figure(2); plot(x,ue,'-k',x,u,'ob-'); axis(plotrange); grid on; drawnow;
+figure(2); plot(x,ue,'-k',x,u,'ob'); axis(plotrange); grid on; drawnow;

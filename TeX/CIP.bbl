@@ -35,6 +35,12 @@ Tanaka, R., T.~Nakamura, and T.~Yabe\leavevmode\nopagebreak\newline 2000.
 \newblock Constructing exactly conservative scheme in a non-conservative form.
 \newblock {\em Computer physics communications}, 126(3):232--243.
 
+\bibitem[\protect\astroncite{Van~Leer}{1974}]{VanLeer1974II}
+Van~Leer, B.\leavevmode\nopagebreak\newline 1974.
+\newblock Towards the ultimate conservative difference scheme. ii. monotonicity
+  and conservation combined in a second-order scheme.
+\newblock {\em Journal of computational physics}, 14(4):361--370.
+
 \bibitem[\protect\astroncite{Xiao and Yabe}{2001}]{Xiao2001}
 Xiao, F. and T.~Yabe\leavevmode\nopagebreak\newline 2001.
 \newblock Completely conservative and oscillationless semi-lagrangian schemes

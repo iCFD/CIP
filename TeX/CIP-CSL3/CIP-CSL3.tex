@@ -1,0 +1,219 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{latexsym}
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
+\usepackage{natbib}
+\usepackage{lineno}
+
+% Additional package to show the number of equation
+\usepackage{showlabels}
+\usepackage{hyperref}
+
+% Page length commands go here in the preamble
+\setlength{\oddsidemargin}{0.10in}	% Left margin of 1 in + 0 in = 1 in
+\setlength{\textwidth}{6.50in}		% Right margin of 8.5 in - 1 in - 6.5 in = 1 in
+\setlength{\topmargin}{-0.75in}		% Top margin of 2 in -0.75 in = 1 in
+\setlength{\textheight}{9.2in} 		% Lower margin of 11 in - 9 in - 1 in = 1 in
+
+% For Theorems and Definitions
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+
+% Manuel's Macros
+\renewcommand{\u}{\boldsymbol{\upsilon}} % for vector upsilon
+\newcommand{\p}{\boldsymbol{p}} 		% for vector p
+\renewcommand{\r}{\boldsymbol{r}} 		% for vector r
+\newcommand{\x}{\boldsymbol{x}} 		% for vector x
+\renewcommand{\c}{\boldsymbol{c}} 		% for vector c
+\newcommand{\vecxi}{\boldsymbol{\xi}}	% for vector xi
+\DeclareMathOperator{\Sample}{Sample}
+\let\vaccent=\v % rename builtin command \v{} to \vaccent{}
+\renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
+\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}}
+% for vectors of Greek letters
+\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}} % for unit vector
+\newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
+\newcommand{\avg}[1]{\left< #1 \right>} % for average
+\let\underdot=\d % rename builtin command \d{} to \underdot{}
+\renewcommand{\d}[2]{\frac{d #1}{d #2}} % for derivatives
+\newcommand{\dx}[1]{\frac{d}{d #1}} % for derivatives without specifying the derived function
+\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for double derivatives
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+% for partial derivatives
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}}
+% for double partial derivatives
+\newcommand{\pdc}[3]{\left( \frac{\partial #1}{\partial #2}
+ \right)_{#3}} % for thermodynamic partial derivatives
+\newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
+\newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
+\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|
+ \left. #2 \vphantom{#1} \right>} % for Dirac brackets
+\newcommand{\matrixel}[3]{\left< #1 \vphantom{#2#3} \right|
+ #2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
+\newcommand{\grad}[1]{\gv{\nabla} #1} % for gradient
+\newcommand{\gradx}[2]{\gv{\nabla}_{#2} #1} % for gradient
+\let\divsymb=\div % rename builtin command \div to \divsymb
+\renewcommand{\div}[1]{\gv{\nabla} \cdot #1} % for divergence
+\newcommand{\divx}[2]{\gv{\nabla}_{#2} \cdot #1} % for divergence v2
+\newcommand{\curl}[1]{\gv{\nabla} \times #1} % for curl
+\newcommand{\minmod}[1]{\mathrm{minmod} #1} % for minmod
+\newcommand{\sgn}[1]{\mathrm{sgn} #1} % for sign
+
+% Spacing and Indentation
+\renewcommand{\baselinestretch}{1.5} % 1.5 denotes double spacing. Changing it will change the spacing
+%\setlength{\parindent}{0in}
+
+%%%%%%%%%%%%%%%%%%%
+% Document begins!
+%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\title{CIP---CSL3 scheme implementation in MATLAB}
+\author{Oleg Kravchenko\textsuperscript{1} \& Manuel Diaz* \\
+\small \textsuperscript{1} Department of Higher Mathematics, Bauman Moscow State Technical University, Moscow, Russia. \\[-3mm]
+\small * Institute of Applied Mechanics, National Taiwan University, Taiwan R.O.C.}
+\date{\today}
+
+\maketitle
+
+\linenumbers
+
+\abstract{Several versions of CIP---CSL3 scheme.}
+
+\section{First version of CIP---CSL3}
+
+%%%%%%%%%%%%%%
+% NOTES:
+%%%%%%%%%%%%%%
+%
+% **Note that nothing here right now if considered final. The purpose of this document is simply to serve as an enviroment (or a very orginized board) meant to collaborate/play/explore/test CIP formulations and any new idea that comes in time. Manuel Diaz. 2015/07/28.
+%
+% **Use "rsync -r /home/manuel/Dropbox/Apps/Texpad/Paper3/CIP/ /home/manuel/github/CIP/Tex/" to sincronize the Dropbox version with the GitHub version. (Debian 7 only!) Manuel Diaz. 2015/07/28.
+%
+%
+
+% Xiao, 2001
+The outline of the computational procedure was introduced in Dr.\,F.\,Xiao's papers \cite{Xiao2001},~\cite{Xiao2003}.
+\subsection{Mathematical background}
+The $i$--th interpolation polynomial is constructed over upwind stencils. Left--bias
+and right--bias components are the following
+\begin{equation}\label{eq:01}
+F_i^L(x) = \sum\limits_{k=0}^{3} c_{ki}^L(x-x_i)^k, \quad x\in[x_{i-1},\,x_i]
+\end{equation}
+and
+\begin{equation}\label{eq:02}
+F_i^R(x) = \sum\limits_{k=0}^{3} c_{ki}^R(x-x_i)^k, \quad x\in[x_{i},\,x_{i+1}].
+\end{equation}
+A construction over the left--side stencil of grid $i$ with $x\in[x_{i-1},\,x_i]$
+implies the case of $u\geqslant0$ and the right--side stencil the case of $u<0$. Constrains for left--bias
+\begin{align}
+  F_i^L(x_i) &= f^n(x_i), \label{eq:03}\\
+  F_i^L(x_{i-1}) &= f^n(x_{i-1}), \label{eq:04}\\
+  \int\limits_{x_{i-1}}^{x_i} F_i^L(x)\,dx &= \rho_{i-\frac{1}{2}}^n, \label{eq:05}\\
+  \left.\dfrac{dF_i^L(x)}{dx}\right|_{x=x_{i-\frac{1}{2}}} &= d_{i-\frac{1}{2}}^n, \label{eq:06}
+\end{align}
+and right--bias, respectively.
+\begin{align}
+  F_i^R(x_i) &= f^n(x_i), \label{eq:07}\\
+  F_i^R(x_{i+1}) &= f^n(x_{i+1}), \label{eq:08}\\
+  \int\limits_{x_{i}}^{x_{i+1}} F_i^R(x)\,dx &= \rho_{i+\frac{1}{2}}^n, \label{eq:09}\\
+  \left.\dfrac{dF_i^R(x)}{dx}\right|_{x=x_{i+\frac{1}{2}}} &= d_{i+\frac{1}{2}}^n. \label{eq:10}
+\end{align}  
+Consequently, unknown coefficients $c_{ki}^L$ could be found from the system \eqref{eq:03}---\eqref{eq:06} and $c_{ki}^R$ from \eqref{eq:07}---\eqref{eq:10} with
+the usage of someone symbolic mathematics toolbox, for example, Wolfram Mathematica.
+Define $h := \Delta x_{i-\frac{1}{2}}$ and $\tau := \triangle t$. Then, one could find coefficients of polynomial \eqref{eq:01}
+\begin{align}\label{eq:11}
+  \begin{cases}
+   c_{0i}^L &= f_i^n, \\
+   c_{1i}^L &= -\dfrac{6}{h^2}\rho_{i-\frac{1}{2}}^n + \dfrac{6}{h}f_i^n - 2d_{i-\frac{1}{2}}^n,\\
+   c_{2i}^L &= -\dfrac{6}{h^3}\rho_{i-\frac{1}{2}}^n + \dfrac{3}{h^2}(3f_i^n-f_{i-1}^n) - \dfrac{6}{h}d_{i-\frac{1}{2}}^n, \\
+   c_{3i}^L &= \dfrac{4}{h^3}(f_i^n-f_{i-1}^n) - \dfrac{4}{h^2}d_{i-\frac{1}{2}}^n,
+  \end{cases}  
+\end{align}
+and coefficients of polynomial \eqref{eq:02} analogously,
+\begin{align}\label{eq:12}
+  \begin{cases}
+   c_{0i}^R &= f_i^n, \\
+   c_{1i}^R &= \dfrac{6}{h^2}\rho_{i+\frac{1}{2}}^n - \dfrac{6}{h}f_i^n - 2d_{i+\frac{1}{2}}^n,\\
+   c_{2i}^R &= -\dfrac{6}{h^3}\rho_{i+\frac{1}{2}}^n + \dfrac{3}{h^2}(3f_i^n-f_{i-1}^n) + \dfrac{6}{h}d_{i+\frac{1}{2}}^n, \\
+   c_{3i}^R &= -\dfrac{4}{h^3}(f_i^n-f_{i+1}^n) - \dfrac{4}{h^2}d_{i+\frac{1}{2}}^n.
+  \end{cases}
+\end{align}
+
+
+\subsection{Algorithm}
+\begin{enumerate}
+\item Compute $d_{i-\frac{1}{2}}^n$ from $f_{i-\frac{1}{2}}^n$ values using any slope approximation
+$$
+f_{i-\frac{1}{2}}^n = \dfrac{3}{2h}\rho_{i-\frac{1}{2}}^n - \dfrac{1}{4}(f_i^n + f_{i-1}^n).
+$$
+Hyman's approximation:
+$$
+d_{i-\frac{1}{2}}^n = \dfrac{1}{12h} (-f_{i+\frac{3}{2}}^n + 8f_{i+\frac{1}{2}}^n - 8f_{i-\frac{3}{2}}^n + f_{i-\frac{5}{2}}^n).
+$$
+UNO approximation:
+$$
+d_{i-\frac{1}{2}}^n = \minmod (S_{i-\frac{1}{2}}^{+},\,S_{i-\frac{1}{2}}^{-}).
+$$
+%where $\minmod$ function is defined as follows:
+%$$
+%
+%$$
+CW (Collela$\&$Woodward) approximation of $d_{i-\frac{1}{2}}$:
+$$
+d_{i-\frac{1}{2}}^n =
+\begin{cases}
+&\dfrac{1}{h}\min(|\delta f_{i-\frac{1}{2}}^n|, 2|f_{i+\frac{1}{2}}^n - f_{i-\frac{1}{2}}^n|, 2|f_{i-\frac{1}{2}}^n - f_{i-\frac{3}{2}}^n|) \sgn(\delta f_{i-\frac{1}{2}}^n),~\text{otherwise} \\
+&0,~\text{if}~(f_{i+\frac{1}{2}}^n-f_{i-\frac{1}{2}}^n)(f_{i-\frac{1}{2}}^n-f_{i-\frac{3}{2}}^n)\leqslant 0.
+\end{cases}
+$$
+Simplified approximation of $d_{i-\frac{1}{2}}$ via $\minmod$ function:
+$$
+\hat{d}_{i-\frac{1}{2}}^n = \minmod(\tilde{d}_{i-\frac{1}{2}}^n,\,2S_i,\,2S_{i-1})
+$$
+with $S_{i}=\dfrac{1}{h}\biggl(f_{i+\frac{1}{2}}^n-f_{i-\frac{1}{2}}^n\biggr)$ and $\tilde{d}_{i-\frac{1}{2}} = \dfrac{1}{2h}(f_{i+1}^n-f_{i-1}^n)$. Finally,
+$$
+d_{i-\frac{1}{2}}^n = \beta \hat{d}_{i-\frac{1}{2}}^n.
+$$
+
+\item Determine the cubic polynomial \eqref{eq:01},\eqref{eq:02} in terms of $f_i,\,f_{i-1}^n,d_{i-1/2}^n,\rho_{i-1/2}^n$ by \eqref{eq:11},\eqref{eq:12}.
+\item Calculate the semi--Lagrangian solution of $f$
+$$
+\tilde{f}_i = 
+\begin{cases}
+F_i^L(x_i - u\tau),\quad u\geqslant0, \\
+F_i^R(x_i - u\tau),\quad u<0.
+\end{cases}
+$$
+\item Correct $f$ according to velocity divergence
+$$
+f_i^{n+1} = \tilde{f}_i - \dfrac{\tau}{2h}\tilde{f}_i(u_{i+1}-u_{i-1}).
+$$
+\item Compute the flux 
+$$
+g_i = -\min(0,\xi)\biggl(f_i^n + \sum\limits_{k=1}^3 \frac{1}{k+1}c_{ki}^R\xi^k\biggr) -
+    \max(0,\xi)\biggl(f_i^n + \sum\limits_{k=1}^3 \frac{1}{k+1}c_{ki}^L\xi^k\biggr).
+$$
+\item Predict the cell-integrated average $\rho$ using the exactly conservative formulation
+$$
+\rho_{i-\frac{1}{2}}^{n+1} = \rho_{i-\frac{1}{2}}^{n} - (g_i - g_{i-1}).
+$$
+\end{enumerate}
+
+Notice, that condition \eqref{eq:05} have been defined in \cite{Xiao2001} and in \cite{Xiao2003} it have been introduced in the following form
+$$
+\dfrac{1}{h}\int\limits_{x_{i-1}}^{x_i} F_i^L(x)\,dx = \bar{f}_{i-\frac{1}{2}}^n.
+$$
+So, one could find that
+$$
+\rho_{i-\frac{1}{2}}^n = h\bar{f}_{i-\frac{1}{2}}^n.
+$$
+
+
+\section{Second version of CIP-CSL3}
+The second version of CIP-CSL3 numerical scheme is devoted to the different type of
+discretization with respect to \emph{point--values} (PV) and \emph{volume--integrated averages} (VIA) \cite{IiXiao2007},\,\cite{IiXiao2009}. This novel ideology of spatial discretization led to evolution of the abbreviation, such as VSIAM,\,CIP/MM-FVM,\,MCV.
+% Begin the Bibliography
+\bibliographystyle{humannat}
+\bibliography{../CIP}
+
+\end{document} 

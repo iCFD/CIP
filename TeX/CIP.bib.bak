@@ -123,20 +123,7 @@
   number={2},
   pages={498--522},
   year={2001},
-  publisher={Elsevier},
-  %howpublished = "\url{http://aiweb.techfak.uni-bielefeld.de/content/bworld-robot-control-software/}"
-  url={http://google.com}
-}
-
-@article{Xiao2003,
-  title={An efficient method for capturing free boundaries in multi-fluid simulations},
-  author={Xiao, Feng and Akio, Ikebata},
-  journal={International Journal for Numerical Methods in Fluids},
-  volume={42},
-  number={2},
-  pages={187--210},
-  year={2003},
-  publisher={Wiley}
+  publisher={Elsevier}
 }
 
 @article{Xiao2004,

@@ -13,7 +13,7 @@
 % [1] Xiao, Feng, and Takashi Yabe. "Completely conservative and
 %     oscillationless semi-Lagrangian schemes for advection transportation."
 %     Journal of computational physics 170.2 (2001): 498-522.  
-% [2] Li, Satoshi, and Feng Xiao. "CIP/multi-moment finite volume method
+% [2] Ii, Satoshi, and Feng Xiao. "CIP/multi-moment finite volume method
 %     for Euler equations: a semi-Lagrangian characteristic formulation."
 %     Journal of Computational Physics 222.2 (2007): 849-871.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,9 +23,9 @@ clear; %close all; clc;
 
 %% Parameters
 fluxfun = 'linear'; 
-    cfl = 0.20;	% CFL condition.
-   tEnd = 1;	% final time.
-     nx = 201;	% number of nodes.
+    cfl = 0.2;	% CFL condition.
+   tEnd = 2;	% final time.
+     nx = 101;	% number of nodes.
  scheme = 3;	% {3}CSL3.
     
 % Build Mesh
@@ -34,7 +34,7 @@ a=-1; b=1; dx=(b-a)/(nx-1); x=a:dx:b; xc=a+dx/2:dx:b;
 % Define Velocity Field functions
 switch fluxfun
     case 'linear'
-        advect = @(x) +1.0*ones(size(x));
+        advect = @(x) -1.0*ones(size(x));
     case 'quasilinear' 
         advect = @(x) 1.0+0.5*sin(2*pi*x);
 end
@@ -63,12 +63,14 @@ dl=0.1; plotrange=[a,b,min(u0)-dl,max(u0)+dl];
 dt0=cfl*dx/max(abs(v(:)));
 
 % Set initial time & load IC
-t=0; u=u0; vsgn=sign(v); g=zeros(1,nx-1); it=0; dt=dt0; 
+t=0; u=u0; it=0; dt=dt0; 
+
 % Set F (shift polynom)
-F = ue;
+F=ue; g=zeros(1,nx-1);
+
 % Data indexes
-L = 1:nx-1;
-R = 2:nx;
+L=1:nx-1; R=L+1;
+
 while t < tEnd
     % Correction for final time step
     if t+dt>tEnd, dt=tEnd-t; end
@@ -80,13 +82,36 @@ while t < tEnd
     xi=-v*dt;
 
     % Data arrays
-    %um=u(1:nx-2); uo=u(2:nx-1); up=u(3:nx);
-    uo=u(L); up=u(R); go=g(L); gm=[g(nx-1), g(1:nx-2)];
+    uo=u(L); up=u(R); go=g(L); gm=g([nx-1,1:nx-2]); gp=g([2:nx-1,1]);
     
     % Build F_R(x) interpolation polynomial
-    if vsgn > 0
+    if v > 0
+        
+        % cell-central values
+        r=0.5*(uo+up)*dx-(go-gm);
+        uc=2/(3*dx)*r-(uo+up)/4;
+        
+        % central values arrays
+        ucpp=circshift(uc,[0,-2]);
+        ucp =circshift(uc,[0,-1]);
+        ucm =circshift(uc,[0,+1]);
+        ucmm=circshift(uc,[0,+2]);
+        
+        % slopes in UNO approximation
+        s1=(ucm-ucmm)/dx;
+        s2=(uc-ucm)/dx;
+        s3=(ucp-uc)/dx;
+        s4=(ucpp-ucp)/dx;
+        
+        Shp=s3-dx*minmod((s3-s2)/(2*dx),(s4-s3)/(2*dx));
+        Shn=s2-dx*minmod((s2-s1)/(2*dx),(s3-s2)/(2*dx));
+        
+        d=minmod(s2,s3);        
+        
         % Cell mass($\rho$) & central slope
-        r=0.5*(uo+up)*dx-(go-gm); d=(up-uo)/dx; % 2nd order approx
+        r=0.5*(uo+up)*dx-(go-gm); 
+        d=(up-uo)/dx; % 1st order approx
+        
         % Compute CIP-CSL coeficients for R-bias interp-poly
         c1=  6*r/dx^2 - 6*uo/dx - 2*d;
         c2= -6*r/dx^3 + 3*(3*uo-up)/dx^2 + 6*d/dx;
@@ -96,9 +121,10 @@ while t < tEnd
         F(R) = c3.*xi(R).^3 + c2.*xi(R).^2 + c1.*xi(R) + uo;        
     else
         % Cell mass($\rho$) & central slope
-        r=0.5*(uo+up)*dx; d=(uo-up)/dx; % 2nd order approx
+        r=0.5*(uo+up)*dx;%-(go-gp); 
+        d=(uo-up)/dx; % 1st order approx
         % Compute CIP-CSL coeficients for L-bias interp-poly
-        c1= -6*r/dx^2 - 6*uo/dx - 2*d;
+        c1= -6*r/dx^2 + 6*uo/dx - 2*d;
         c2= -6*r/dx^3 + 3*(3*up-uo)/dx^2 - 6*d/dx;
         c3=  4*(up-uo)/dx^3 - 4*d/dx^2;
         
@@ -108,8 +134,8 @@ while t < tEnd
     
 	
     % flux of mass across cell boundaries
-    g = - min(0, xi(R)) .*(uo + c1.*xi(R)/2 + c2.*xi(R).^2/3 + c3.*xi(R).^3/4) - ...
-        max(0, xi(L)) .* (uo + c1.*xi(L)/2 + c2.*xi(L).^2/3 + c3.*xi(L).^3/4); 
+    g=-min(0,xi(R)).*(uo+c1.*xi(R)/2+c2.*xi(R).^2/3+c3.*xi(R).^3/4) ...
+      -max(0,xi(L)).*(uo+c1.*xi(L)/2+c2.*xi(L).^2/3+c3.*xi(L).^3/4); 
     
     % BCs and update
 %     u_tilde = [F(nx-1),F];
@@ -119,6 +145,7 @@ while t < tEnd
     
     % non-Advection step
     u = u_tilde - 0.5*(dt/dx)*(v-v).*u_tilde;    
+
     % BC
     u(1) = u_tilde(end);
 
@@ -128,10 +155,8 @@ while t < tEnd
     % Plot u
     if rem(it,1)==0
         figure(2); plot(x,u,'ob-'); axis(plotrange); grid on; drawnow;
-%         plot(x,CommonIC(x-t,9),'-k',x,u,'ob-'); 
     end
 end 
 
 % Post-Process
-ue = CommonIC(mod(x - t, .5),9); % exact solution in final time step
 figure(2); plot(x,ue,'-k',x,u,'ob-'); axis(plotrange); grid on; drawnow;

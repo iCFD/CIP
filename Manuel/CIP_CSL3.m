@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 Solving 1-D wave equation with 
 %     constrained interpolation profile-Conservative Semi-lagrangian
-%                     algorithm namely CIP-CSL
+%                     algorithm namely CIP-CSL3
 %
 %               du/dt + df/dx = S(x),  for x \in [a,b]
 %               where f = v(x,t)*f: linear/quasilinear
@@ -26,7 +26,6 @@ fluxfun = 'linear';
     cfl = 0.2;	% CFL condition.
    tEnd = 2;	% final time.
      nx = 101;	% number of nodes.
- scheme = 3;	% {3}CSL3.
     
 % Build Mesh
 a=-1; b=1; dx=(b-a)/(nx-1); x=a:dx:b; xc=a+dx/2:dx:b;

@@ -23,7 +23,7 @@ clear; %close all; clc;
 
 %% Parameters
 fluxfun = 'linear'; 
-    cfl = 0.2;	% CFL condition.
+    cfl = 0.25;	% CFL condition.
    tEnd = 2;	% final time.
      nx = 101;	% number of nodes.
     
@@ -134,10 +134,10 @@ while t < tEnd
 	
     % flux of mass across cell boundaries
     g=-min(0,xi(R)).*(uo+c1.*xi(R)/2+c2.*xi(R).^2/3+c3.*xi(R).^3/4) ...
-      -max(0,xi(L)).*(uo+c1.*xi(L)/2+c2.*xi(L).^2/3+c3.*xi(L).^3/4); 
+      -max(0,xi(L)).*(up+c1.*xi(L)/2+c2.*xi(L).^2/3+c3.*xi(L).^3/4); 
     
     % BCs and update
-%     u_tilde = [F(nx-1),F];
+    %u_tilde = [F(nx-1),F];
     %u_tilde = [F(nx-2),F,F(1)];
     u_tilde = F;
     

@@ -24,7 +24,7 @@ clear; close all; clc;
 fluxfun = 'linear'; 
     cfl = 0.90;	% CFL condition.
    tEnd = 2.00;	% final time.
-     nx = 101;	% number of nodes.
+     nx = 201;	% number of nodes.
     
 % Build Mesh
 a=-1; b=1; x=linspace(a,b,nx)'; dx=x(2:nx)-x(1:nx-1); xc=x(1:nx-1)+dx/2;
@@ -41,7 +41,7 @@ end
 vc=advect(xc); v=advect(x); vsgn=zeros(nx,1); vsgn(2:nx-1)=sign(v(2:nx-1));
 
 % Build IC
-ICcase=2;  % {1}Testing, {2}Costum ICs
+ICcase=1;  % {1}Testing, {2}Costum ICs
 switch ICcase
     case 1 % Testing IC
         u0=TestingIC(x);  % Jiang and Shu IC

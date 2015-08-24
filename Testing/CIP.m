@@ -23,9 +23,9 @@ clear; %close all; clc;
 %% Parameters
 fluxfun = 'scalar'; 
     cfl = 0.90;	% CFL condition.
-   tEnd = 10;	% final time.
+   tEnd = 2.0;	% final time.
      nx = 101;	% number of nodes.
- scheme = 1;	% {0}CIP0 and {1}CPI1.
+ scheme = 0;	% {0}CIP0 and {1}CPI1.
     
 % Build Mesh
 a=-1; b=1; dx=(b-a)/(nx-1); x=a:dx:b; 
@@ -33,7 +33,7 @@ a=-1; b=1; dx=(b-a)/(nx-1); x=a:dx:b;
 % Define Velocity Field functions
 switch fluxfun
     case 'scalar'
-        advect = @(x) 2;
+        advect = @(x) +1;
     case 'linear'
         advect = @(x) x;
 end
@@ -42,7 +42,7 @@ end
 v=advect(x);
 
 % Build IC
-ICcase=1;  % {1}Testing, {2}Costum ICs
+ICcase=2;  % {1}Testing, {2}Costum ICs
 switch ICcase
     case 1 % Testing IC
         u0=TestingIC(x);  % Jiang and Shu IC

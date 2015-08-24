@@ -12,12 +12,12 @@ function [L1_norm,Linf_norm] = TestMethods(u,CFL,tEnd,Ic,nx,method)
 % clear; close all; clc;
 
 %% Parameters
-%      u =-2.0;	% scalar velocity in x direction
-%    CFL = 0.7;	% CFL condition
+%      u = 1.0;	% scalar velocity in x direction
+%    CFL = 0.9;	% CFL condition
 %   tEnd = 2.0;	% Final time
-% 	nx = 100;	% number of cells/points
+% 	nx = 20;	% number of cells/points
 %     Ic = 3;     % Initial condition (see CommonIC.m)
-% method = 8;     % {1}CIP0,  {2}CIP1,  {3}RCIP,  {4}CIP-CLS
+% method = 3;     % {1}CIP0,  {2}CIP1,  {3}RCIP,  {4}CIP-CLS
 %                 % {5}LDLR,  {6}WENO3, {7}WENO5, {8}WENO7.
 
 %% Preprocess
@@ -240,14 +240,14 @@ while t < tEnd
     t=t+dt; it=it+1;
     
 	% Plot solution   
-    %if rem(it,50) == 0
-       %figure(2); plot(x,q0,'-k',x,q,'.r'); axis(plotrange);
-       %set(gca,'dataaspectratio',[1.1 2 1]); grid on; shg; drawnow;
-    %end
+%     if rem(it,50) == 0
+%        figure(2); plot(x,q0,'-k',x,q,'.r'); axis(plotrange);
+%        set(gca,'dataaspectratio',[1.1 2 1]); grid on; shg; drawnow;
+%     end
 end
 
 %% Final Plot
-% figure; plot(x,q0,'-k',x,q,'.r'); axis(plotrange); grid on; 
+% figure(2); plot(x,q0,'-k',x,q,'.r'); axis(plotrange); grid on; 
 % 
 % switch method
 %     case 1; scheme='CIP0';

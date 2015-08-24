@@ -8,18 +8,51 @@
 %                coded by Manuel Diaz, NTU, 2015.08.21
 %                               
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-clear; %close all; clc;
+clear; close all; clc;
 
 %% Setup Plot Configuration
+% set(0,'defaultTextInterpreter','none') 
+set(0,'defaultTextInterpreter','latex')
+set(0,'DefaultTextFontName','Times',...
+'DefaultTextFontSize',18,...
+'DefaultAxesFontName','Times',...
+'DefaultAxesFontSize',18,...
+'DefaultLineLineWidth',1.5,...
+'DefaultAxesBox','on',...
+'defaultAxesLineWidth',1.5,...
+'DefaultFigureColor','w',...
+'DefaultLineMarkerSize',5.5)
+%-------------------------------------------------------------------------
+color=['k','r','g','c','m','b','y','w','none'];
+lines={'-',':','--','-.','-.',' '};
+mark=['s','+','o','x','v',' '];
 
+% Figures Saving Path
+path ='~/github/CIP/TeX/figures/';
+
+% Labels
+label_y='$u(x,t)$';
+label_x='$x$';
+
+%% MAIN PLOTING LOOP
+for sch = 1:7
+    
+    % methods to evaluate
+    mth = [1,2,3,5,6,7,8];
+    
+    % one CFL for every method!
+    cfl = [0.9,0.9,0.9,0.9,0.9,0.6,0.2]; 
+    
+    % name (if we test any particular parameter or IC)
+    name='_Gaussian';
 
 %% Parameters
-     u = 2.0;	% scalar velocity in x direction
-   CFL = 0.9;	% CFL condition
+     u = -1.0;	% scalar velocity in x direction
+   CFL = cfl(sch);	% CFL condition
   tEnd = 2.0;	% Final time
-	nx = 80;	% number of cells/points
-    Ic = 3;     % Initial condition (see CommonIC.m)
-method = 3;     % {1}CIP0,  {2}CIP1,  {3}RCIP,  {4}CIP-CLS
+	nx = 100;	% number of cells/points
+    Ic = 1;     % Initial condition (see CommonIC.m)
+method = mth(sch);     % {1}CIP0,  {2}CIP1,  {3}RCIP,  {4}CIP-CLS
                 % {5}LDLR,  {6}WENO3, {7}WENO5, {8}WENO7.
 
 %% Preprocess
@@ -46,13 +79,22 @@ end
 dq0=gradient(q0,dx);
 
 % Exact solution
-qe = q0;
+xe=linspace(a,b,500);
+switch ICtest
+    case 1
+        qe = CommonIC(xe,Ic); % Choose between 1~9 cases
+    case 2
+        qe = TestingIC(xe);
+    otherwise
+        error('IC not listed!');
+end
 
 % Extra parameter: tolerance for LDLR scheme
 tol=0.1*dx^(1.4);
 
 % Plot Range
-dl=0.1; plotrange=[a,b,min(q0)-2*dl,max(q0)+4*dl];
+%dl=0.1; plotrange=[a,b,min(q0)-2*dl,max(q0)+8*dl]; % for Sine
+dl=0.1; plotrange=[a,b,min(q0)-2*dl,max(q0)+4*dl]; % for everything else
     
 %% Solver Loop 
 
@@ -242,33 +284,64 @@ while t < tEnd
     t=t+dt; it=it+1;
     
 	% Plot solution   
-    if rem(it,50) == 0
-       figure(2); plot(x,q0,'-k',x,q,'.r'); axis(plotrange);
-       set(gca,'dataaspectratio',[1.1 2 1]); grid on; shg; drawnow;
-    end
+    %if rem(it,50) == 0
+    %   figure(2); plot(x,q0,'-k',x,q,'.r'); axis(plotrange);
+    %   set(gca,'dataaspectratio',[1.1 2 1]); grid on; shg; drawnow;
+    %end
 end
 
 %% Final Plot
-figure(2); plot(x,q0,'-k',x,q,'.r'); axis(plotrange); grid on; 
+figure
 
-switch method
-    case 1; scheme='CIP0';
-	case 2; scheme='CIP1';
-    case 3; scheme='RCIP';
-	case 4; scheme='CIP-CSL';
-    case 5; scheme='LDLR';
-    case 6; scheme='WENO3';
-	case 7; scheme='WENO5';
-	case 8; scheme='WENO7';
-end
+% marker size
+ms = 5;
 
-legend(scheme,'Exact','Location','NorthEast'); legend('boxoff'); 
-set(gca,'dataaspectratio',[1.1 2 1]);
+hold on;
+%-------------
+plot(xe,qe,[color(2),lines{1},mark(6)],...
+	'MarkerEdgeColor',color(2),...
+	'MarkerFaceColor',color(8));
+scatter(x,q,7*ms,[color(1),mark(3)],...
+    'MarkerEdgeColor',color(1),...
+    'MarkerFaceColor',color(9));
+%-------------
+hold off;
+
+% Method name list
+scheme = {'CIP0','CIP1','RCIP','CPI-CSL','LDLR','WENO3','WENO5','WENO7'};
+
+% Set plot Range
+axis(plotrange); grid on;
+
+% Axis labels
+ylabel(label_y);
+xlabel(label_x);
+
+% Figure's Information
+title( [' $N_x$: ',num2str(nx),...
+        ', $dx$: ',num2str(abs(dx(1)),'%1.2e'),...
+        ', $dt$: ',num2str(dt0,'%1.2e'),...
+        ', time: ',num2str(t,'%1.1f')] );
+
+h=legend('Exact',scheme{method}); legend('boxoff');
+set(h,'Location','North','FontSize',16,'Orientation','horizontal','Interpreter','Latex');  
+%set(gca,'dataaspectratio',[0.5 2 1]); % for Sine
+set(gca,'dataaspectratio',[1.5 2 1]); % for everything else
 
 %% Compute Norms
 
 % L1 Error
-L1_norm = sum(abs(q-qe))/nx;
+L1_norm = sum(abs(q-q0))/nx;
 
 % L\infty Error
-Linf_norm = max(abs(q-qe));
+Linf_norm = max(abs(q-q0));
+
+%% Save plot 
+
+points = ['_nx',num2str(nx)];
+outtime= ['_t',num2str(t)];
+
+% Print Figure
+print('-depsc',[path,scheme{method},points,outtime,name,'.eps']); close
+
+end

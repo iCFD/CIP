@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2015.7.14)  5 AUG 2015 04:11
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2015.7.14)  24 AUG 2015 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -154,91 +154,1424 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box28
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@lemma=\count107
-\c@remark=\count108
- (./CIP.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip51
+\subfigcapskip=\skip52
+\subfigcaptopadj=\dimen120
+\subfigbottomskip=\skip53
+\subfigcapmargin=\dimen121
+\subfiglabelskip=\skip54
+\c@subfigure=\count107
+\c@lofdepth=\count108
+\c@subtable=\count109
+\c@lotdepth=\count110
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip55
+\subfig@bottom=\skip56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count111
+))
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+\c@lemma=\count112
+\c@remark=\count113
+ (./CIP.aux
+
+LaTeX Warning: Label `fig:nx400t2' multiply defined.
+
+)
 \openout1 = `CIP.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen124
+\scratchbox=\box29
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen125
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks29
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for U+lasy on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 70.
+LaTeX Font Info:    Try loading font information for U+msa on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 70.
+LaTeX Font Info:    Try loading font information for U+msb on input line 72.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 97.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Overfull \hbox (0.80621pt too wide) in paragraph at lines 308--308
+
+Package natbib Warning: Citation `Yabe1991' on page 1 undefined on input line 9
+9.
+
+
+Package natbib Warning: Citation `Yabe2001' on page 1 undefined on input line 1
+00.
+
+
+Package natbib Warning: Citation `Tanaka2000' on page 1 undefined on input line
+ 101.
+
+
+Package natbib Warning: Citation `Xiao2001' on page 1 undefined on input line 1
+01.
+
+
+Package natbib Warning: Citation `Nakamura2001' on page 1 undefined on input li
+ne 102.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package natbib Warning: Citation `LiXiao2007' on page 2 undefined on input line
+ 106.
+
+
+Package natbib Warning: Citation `Huynh2007' on page 2 undefined on input line 
+106.
+
+
+Package natbib Warning: Citation `LiXiao2009' on page 2 undefined on input line
+ 107.
+
+
+Package natbib Warning: Citation `Xiao1996' on page 2 undefined on input line 1
+09.
+
+
+Package natbib Warning: Citation `Artebrant2006' on page 2 undefined on input l
+ine 109.
+
+
+Package natbib Warning: Citation `Yabe1991' on page 2 undefined on input line 1
+12.
+
+[2]
+
+Package natbib Warning: Citation `VanLeer1974II' on page 3 undefined on input l
+ine 237.
+
+[3]
+Overfull \hbox (0.80621pt too wide) in paragraph at lines 310--310
 []\OT1/cmr/bx/n/14.4 Conservative semi-Lagrangian Con-strained In-ter-po-la-tio
 n
  []
 
 [4]
-Overfull \hbox (0.80621pt too wide) in paragraph at lines 396--396
+Overfull \hbox (0.80621pt too wide) in paragraph at lines 398--398
 []\OT1/cmr/bx/n/14.4 Conservative semi-Lagrangian Con-strained In-ter-po-la-tio
 n
  []
 
-[5] [6] (./CIP.bbl [7]) [8] (./CIP.aux) ) 
+[5]
+
+Package natbib Warning: Citation `Artebrant2006' on page 6 undefined on input l
+ine 488.
+
+[6]
+Package epstopdf Info: Source file: <figures/NormL1_Sinusoidal.eps>
+(epstopdf)                    date: 2015-08-24 10:55:04
+(epstopdf)                    size: 258171 bytes
+(epstopdf)             Output file: <figures/NormL1_Sinusoidal-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2015-08-24 10:55:13
+(epstopdf)                    size: 12773 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/NormL1_Sinusoidal-
+eps-converted-to.pdf figures/NormL1_Sinusoidal.eps>
+(epstopdf)             \includegraphics on input line 541.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/NormL1_Sinusoidal-eps-converted-to.pdf, id=41, 282.05376pt x 311.1625p
+t>
+File: figures/NormL1_Sinusoidal-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/NormL1_Sinusoidal-eps-converted-to.pdf>
+Package pdftex.def Info: figures/NormL1_Sinusoidal-eps-converted-to.pdf used on
+ input line 541.
+(pdftex.def)             Requested size: 197.29623pt x 217.66032pt.
+Package epstopdf Info: Source file: <figures/NormLinf_Sinusoidal.eps>
+(epstopdf)                    date: 2015-08-24 10:55:06
+(epstopdf)                    size: 258110 bytes
+(epstopdf)             Output file: <figures/NormLinf_Sinusoidal-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2015-08-24 10:55:13
+(epstopdf)                    size: 13069 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/NormLinf_Sinusoida
+l-eps-converted-to.pdf figures/NormLinf_Sinusoidal.eps>
+(epstopdf)             \includegraphics on input line 542.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/NormLinf_Sinusoidal-eps-converted-to.pdf, id=43, 282.05376pt x 311.162
+5pt>
+File: figures/NormLinf_Sinusoidal-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/NormLinf_Sinusoidal-eps-converted-to.pdf>
+Package pdftex.def Info: figures/NormLinf_Sinusoidal-eps-converted-to.pdf used 
+on input line 542.
+(pdftex.def)             Requested size: 197.29623pt x 217.66032pt.
+Package epstopdf Info: Source file: <figures/NormL1_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 10:56:03
+(epstopdf)                    size: 258169 bytes
+(epstopdf)             Output file: <figures/NormL1_Gaussian-eps-converted-to.p
+df>
+(epstopdf)                    date: 2015-08-24 10:56:12
+(epstopdf)                    size: 12769 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/NormL1_Gaussian-ep
+s-converted-to.pdf figures/NormL1_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 548.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/NormL1_Gaussian-eps-converted-to.pdf, id=45, 282.05376pt x 311.1625pt>
+File: figures/NormL1_Gaussian-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/NormL1_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/NormL1_Gaussian-eps-converted-to.pdf used on i
+nput line 548.
+(pdftex.def)             Requested size: 197.29623pt x 217.66032pt.
+Package epstopdf Info: Source file: <figures/NormLinf_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 10:56:05
+(epstopdf)                    size: 258108 bytes
+(epstopdf)             Output file: <figures/NormLinf_Gaussian-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2015-08-24 10:56:13
+(epstopdf)                    size: 13065 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/NormLinf_Gaussian-
+eps-converted-to.pdf figures/NormLinf_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 549.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/NormLinf_Gaussian-eps-converted-to.pdf, id=47, 282.05376pt x 311.1625p
+t>
+File: figures/NormLinf_Gaussian-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/NormLinf_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/NormLinf_Gaussian-eps-converted-to.pdf used on
+ input line 549.
+(pdftex.def)             Requested size: 197.29623pt x 217.66032pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx100_t2_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:04
+(epstopdf)                    size: 214012 bytes
+(epstopdf)             Output file: <figures/CIP0_nx100_t2_Sine-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:18
+(epstopdf)                    size: 18619 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx100_t2_Sine
+-eps-converted-to.pdf figures/CIP0_nx100_t2_Sine.eps>
+(epstopdf)             \includegraphics on input line 557.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx100_t2_Sine-eps-converted-to.pdf, id=49, 409.53pt x 197.73875pt
+>
+File: figures/CIP0_nx100_t2_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/CIP0_nx100_t2_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx100_t2_Sine-eps-converted-to.pdf used o
+n input line 557.
+(pdftex.def)             Requested size: 197.29623pt x 95.26352pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx100_t2_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:07
+(epstopdf)                    size: 214080 bytes
+(epstopdf)             Output file: <figures/RCIP_nx100_t2_Sine-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:19
+(epstopdf)                    size: 18872 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx100_t2_Sine
+-eps-converted-to.pdf figures/RCIP_nx100_t2_Sine.eps>
+(epstopdf)             \includegraphics on input line 558.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/RCIP_nx100_t2_Sine-eps-converted-to.pdf, id=51, 407.5225pt x 196.735pt
+>
+File: figures/RCIP_nx100_t2_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/RCIP_nx100_t2_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx100_t2_Sine-eps-converted-to.pdf used o
+n input line 558.
+(pdftex.def)             Requested size: 197.29623pt x 95.24524pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx100_t2_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:08
+(epstopdf)                    size: 214084 bytes
+(epstopdf)             Output file: <figures/LDLR_nx100_t2_Sine-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:19
+(epstopdf)                    size: 18680 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx100_t2_Sine
+-eps-converted-to.pdf figures/LDLR_nx100_t2_Sine.eps>
+(epstopdf)             \includegraphics on input line 562.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx100_t2_Sine-eps-converted-to.pdf, id=53, 407.5225pt x 196.735pt
+>
+File: figures/LDLR_nx100_t2_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/LDLR_nx100_t2_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx100_t2_Sine-eps-converted-to.pdf used o
+n input line 562.
+(pdftex.def)             Requested size: 197.29623pt x 95.24524pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx100_t2_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:09
+(epstopdf)                    size: 214207 bytes
+(epstopdf)             Output file: <figures/WENO3_nx100_t2_Sine-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:20
+(epstopdf)                    size: 18838 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx100_t2_Sin
+e-eps-converted-to.pdf figures/WENO3_nx100_t2_Sine.eps>
+(epstopdf)             \includegraphics on input line 563.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx100_t2_Sine-eps-converted-to.pdf, id=55, 407.5225pt x 196.735p
+t>
+File: figures/WENO3_nx100_t2_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO3_nx100_t2_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx100_t2_Sine-eps-converted-to.pdf used 
+on input line 563.
+(pdftex.def)             Requested size: 197.29623pt x 95.24524pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx100_t2_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:10
+(epstopdf)                    size: 214207 bytes
+(epstopdf)             Output file: <figures/WENO5_nx100_t2_Sine-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:20
+(epstopdf)                    size: 18756 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx100_t2_Sin
+e-eps-converted-to.pdf figures/WENO5_nx100_t2_Sine.eps>
+(epstopdf)             \includegraphics on input line 567.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx100_t2_Sine-eps-converted-to.pdf, id=57, 407.5225pt x 196.735p
+t>
+File: figures/WENO5_nx100_t2_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO5_nx100_t2_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx100_t2_Sine-eps-converted-to.pdf used 
+on input line 567.
+(pdftex.def)             Requested size: 197.29623pt x 95.24524pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx100_t2_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:12
+(epstopdf)                    size: 214207 bytes
+(epstopdf)             Output file: <figures/WENO7_nx100_t2_Sine-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:21
+(epstopdf)                    size: 18946 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx100_t2_Sin
+e-eps-converted-to.pdf figures/WENO7_nx100_t2_Sine.eps>
+(epstopdf)             \includegraphics on input line 568.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx100_t2_Sine-eps-converted-to.pdf, id=59, 407.5225pt x 196.735p
+t>
+File: figures/WENO7_nx100_t2_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO7_nx100_t2_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx100_t2_Sine-eps-converted-to.pdf used 
+on input line 568.
+(pdftex.def)             Requested size: 197.29623pt x 95.24524pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx100_t20_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:19
+(epstopdf)                    size: 214133 bytes
+(epstopdf)             Output file: <figures/CIP0_nx100_t20_Sine-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:21
+(epstopdf)                    size: 18623 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx100_t20_Sin
+e-eps-converted-to.pdf figures/CIP0_nx100_t20_Sine.eps>
+(epstopdf)             \includegraphics on input line 581.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx100_t20_Sine-eps-converted-to.pdf, id=61, 414.54875pt x 197.738
+75pt>
+File: figures/CIP0_nx100_t20_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/CIP0_nx100_t20_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx100_t20_Sine-eps-converted-to.pdf used 
+on input line 581.
+(pdftex.def)             Requested size: 197.29623pt x 94.10791pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx100_t20_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:22
+(epstopdf)                    size: 214201 bytes
+(epstopdf)             Output file: <figures/RCIP_nx100_t20_Sine-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:22
+(epstopdf)                    size: 18873 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx100_t20_Sin
+e-eps-converted-to.pdf figures/RCIP_nx100_t20_Sine.eps>
+(epstopdf)             \includegraphics on input line 582.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/RCIP_nx100_t20_Sine-eps-converted-to.pdf, id=63, 412.54124pt x 196.735
+pt>
+File: figures/RCIP_nx100_t20_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/RCIP_nx100_t20_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx100_t20_Sine-eps-converted-to.pdf used 
+on input line 582.
+(pdftex.def)             Requested size: 197.29623pt x 94.0895pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx100_t20_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:24
+(epstopdf)                    size: 214205 bytes
+(epstopdf)             Output file: <figures/LDLR_nx100_t20_Sine-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:22
+(epstopdf)                    size: 18662 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx100_t20_Sin
+e-eps-converted-to.pdf figures/LDLR_nx100_t20_Sine.eps>
+(epstopdf)             \includegraphics on input line 586.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx100_t20_Sine-eps-converted-to.pdf, id=65, 412.54124pt x 196.735
+pt>
+File: figures/LDLR_nx100_t20_Sine-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/LDLR_nx100_t20_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx100_t20_Sine-eps-converted-to.pdf used 
+on input line 586.
+(pdftex.def)             Requested size: 197.29623pt x 94.0895pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx100_t20_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:26
+(epstopdf)                    size: 214328 bytes
+(epstopdf)             Output file: <figures/WENO3_nx100_t20_Sine-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:23
+(epstopdf)                    size: 18737 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx100_t20_Si
+ne-eps-converted-to.pdf figures/WENO3_nx100_t20_Sine.eps>
+(epstopdf)             \includegraphics on input line 587.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx100_t20_Sine-eps-converted-to.pdf, id=67, 412.54124pt x 196.73
+5pt>
+File: figures/WENO3_nx100_t20_Sine-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/WENO3_nx100_t20_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx100_t20_Sine-eps-converted-to.pdf used
+ on input line 587.
+(pdftex.def)             Requested size: 197.29623pt x 94.0895pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx100_t20_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:29
+(epstopdf)                    size: 214328 bytes
+(epstopdf)             Output file: <figures/WENO5_nx100_t20_Sine-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:23
+(epstopdf)                    size: 18759 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx100_t20_Si
+ne-eps-converted-to.pdf figures/WENO5_nx100_t20_Sine.eps>
+(epstopdf)             \includegraphics on input line 591.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx100_t20_Sine-eps-converted-to.pdf, id=69, 412.54124pt x 196.73
+5pt>
+File: figures/WENO5_nx100_t20_Sine-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/WENO5_nx100_t20_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx100_t20_Sine-eps-converted-to.pdf used
+ on input line 591.
+(pdftex.def)             Requested size: 197.29623pt x 94.0895pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx100_t20_Sine.eps>
+(epstopdf)                    date: 2015-08-24 11:09:36
+(epstopdf)                    size: 214328 bytes
+(epstopdf)             Output file: <figures/WENO7_nx100_t20_Sine-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:10:24
+(epstopdf)                    size: 18949 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx100_t20_Si
+ne-eps-converted-to.pdf figures/WENO7_nx100_t20_Sine.eps>
+(epstopdf)             \includegraphics on input line 592.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx100_t20_Sine-eps-converted-to.pdf, id=71, 412.54124pt x 196.73
+5pt>
+File: figures/WENO7_nx100_t20_Sine-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use figures/WENO7_nx100_t20_Sine-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx100_t20_Sine-eps-converted-to.pdf used
+ on input line 592.
+(pdftex.def)             Requested size: 197.29623pt x 94.0895pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx100_t2_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:33
+(epstopdf)                    size: 214202 bytes
+(epstopdf)             Output file: <figures/CIP0_nx100_t2_Gaussian-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:33
+(epstopdf)                    size: 16528 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx100_t2_Gaus
+sian-eps-converted-to.pdf figures/CIP0_nx100_t2_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 605.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx100_t2_Gaussian-eps-converted-to.pdf, id=73, 417.56pt x 270.008
+74pt>
+File: figures/CIP0_nx100_t2_Gaussian-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use figures/CIP0_nx100_t2_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx100_t2_Gaussian-eps-converted-to.pdf us
+ed on input line 605.
+(pdftex.def)             Requested size: 197.29623pt x 127.57979pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx100_t2_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:35
+(epstopdf)                    size: 214203 bytes
+(epstopdf)             Output file: <figures/RCIP_nx100_t2_Gaussian-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:34
+(epstopdf)                    size: 16690 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx100_t2_Gaus
+sian-eps-converted-to.pdf figures/RCIP_nx100_t2_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 606.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/RCIP_nx100_t2_Gaussian-eps-converted-to.pdf, id=75, 417.56pt x 270.008
+74pt>
+File: figures/RCIP_nx100_t2_Gaussian-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use figures/RCIP_nx100_t2_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx100_t2_Gaussian-eps-converted-to.pdf us
+ed on input line 606.
+(pdftex.def)             Requested size: 197.29623pt x 127.57979pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx100_t2_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:36
+(epstopdf)                    size: 214212 bytes
+(epstopdf)             Output file: <figures/LDLR_nx100_t2_Gaussian-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:34
+(epstopdf)                    size: 16683 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx100_t2_Gaus
+sian-eps-converted-to.pdf figures/LDLR_nx100_t2_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 610.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx100_t2_Gaussian-eps-converted-to.pdf, id=77, 417.56pt x 270.008
+74pt>
+File: figures/LDLR_nx100_t2_Gaussian-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use figures/LDLR_nx100_t2_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx100_t2_Gaussian-eps-converted-to.pdf us
+ed on input line 610.
+(pdftex.def)             Requested size: 197.29623pt x 127.57979pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx100_t2_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:38
+(epstopdf)                    size: 214059 bytes
+(epstopdf)             Output file: <figures/WENO3_nx100_t2_Gaussian-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:35
+(epstopdf)                    size: 17005 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx100_t2_Gau
+ssian-eps-converted-to.pdf figures/WENO3_nx100_t2_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 611.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx100_t2_Gaussian-eps-converted-to.pdf, id=79, 415.5525pt x 265.
+99374pt>
+File: figures/WENO3_nx100_t2_Gaussian-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/WENO3_nx100_t2_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx100_t2_Gaussian-eps-converted-to.pdf u
+sed on input line 611.
+(pdftex.def)             Requested size: 197.29623pt x 126.28745pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx100_t2_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:39
+(epstopdf)                    size: 216111 bytes
+(epstopdf)             Output file: <figures/WENO5_nx100_t2_Gaussian-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:35
+(epstopdf)                    size: 17474 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx100_t2_Gau
+ssian-eps-converted-to.pdf figures/WENO5_nx100_t2_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 615.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx100_t2_Gaussian-eps-converted-to.pdf, id=81, 511.9125pt x 343.
+2825pt>
+File: figures/WENO5_nx100_t2_Gaussian-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/WENO5_nx100_t2_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx100_t2_Gaussian-eps-converted-to.pdf u
+sed on input line 615.
+(pdftex.def)             Requested size: 197.29623pt x 132.30296pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx100_t2_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:41
+(epstopdf)                    size: 214336 bytes
+(epstopdf)             Output file: <figures/WENO7_nx100_t2_Gaussian-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:36
+(epstopdf)                    size: 16945 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx100_t2_Gau
+ssian-eps-converted-to.pdf figures/WENO7_nx100_t2_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 616.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx100_t2_Gaussian-eps-converted-to.pdf, id=83, 417.56pt x 270.00
+874pt>
+File: figures/WENO7_nx100_t2_Gaussian-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/WENO7_nx100_t2_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx100_t2_Gaussian-eps-converted-to.pdf u
+sed on input line 616.
+(pdftex.def)             Requested size: 197.29623pt x 127.57979pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx100_t20_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:14
+(epstopdf)                    size: 214325 bytes
+(epstopdf)             Output file: <figures/CIP0_nx100_t20_Gaussian-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:36
+(epstopdf)                    size: 16532 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx100_t20_Gau
+ssian-eps-converted-to.pdf figures/CIP0_nx100_t20_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 629.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx100_t20_Gaussian-eps-converted-to.pdf, id=85, 422.57875pt x 270
+.00874pt>
+File: figures/CIP0_nx100_t20_Gaussian-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/CIP0_nx100_t20_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx100_t20_Gaussian-eps-converted-to.pdf u
+sed on input line 629.
+(pdftex.def)             Requested size: 197.29623pt x 126.06775pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx100_t20_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:16
+(epstopdf)                    size: 214225 bytes
+(epstopdf)             Output file: <figures/RCIP_nx100_t20_Gaussian-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:37
+(epstopdf)                    size: 16863 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx100_t20_Gau
+ssian-eps-converted-to.pdf figures/RCIP_nx100_t20_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 630.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/RCIP_nx100_t20_Gaussian-eps-converted-to.pdf, id=87, 420.57124pt x 265
+.99374pt>
+File: figures/RCIP_nx100_t20_Gaussian-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/RCIP_nx100_t20_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx100_t20_Gaussian-eps-converted-to.pdf u
+sed on input line 630.
+(pdftex.def)             Requested size: 197.29623pt x 124.78166pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx100_t20_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:19
+(epstopdf)                    size: 214058 bytes
+(epstopdf)             Output file: <figures/LDLR_nx100_t20_Gaussian-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:37
+(epstopdf)                    size: 16710 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx100_t20_Gau
+ssian-eps-converted-to.pdf figures/LDLR_nx100_t20_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 634.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx100_t20_Gaussian-eps-converted-to.pdf, id=89, 420.57124pt x 265
+.99374pt>
+File: figures/LDLR_nx100_t20_Gaussian-eps-converted-to.pdf Graphic file (type p
+df)
+ <use figures/LDLR_nx100_t20_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx100_t20_Gaussian-eps-converted-to.pdf u
+sed on input line 634.
+(pdftex.def)             Requested size: 197.29623pt x 124.78166pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx100_t20_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:20
+(epstopdf)                    size: 214180 bytes
+(epstopdf)             Output file: <figures/WENO3_nx100_t20_Gaussian-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:38
+(epstopdf)                    size: 17061 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx100_t20_Ga
+ussian-eps-converted-to.pdf figures/WENO3_nx100_t20_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 635.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx100_t20_Gaussian-eps-converted-to.pdf, id=91, 420.57124pt x 26
+5.99374pt>
+File: figures/WENO3_nx100_t20_Gaussian-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use figures/WENO3_nx100_t20_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx100_t20_Gaussian-eps-converted-to.pdf 
+used on input line 635.
+(pdftex.def)             Requested size: 197.29623pt x 124.78166pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx100_t20_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:23
+(epstopdf)                    size: 214459 bytes
+(epstopdf)             Output file: <figures/WENO5_nx100_t20_Gaussian-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:39
+(epstopdf)                    size: 16734 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx100_t20_Ga
+ussian-eps-converted-to.pdf figures/WENO5_nx100_t20_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 639.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx100_t20_Gaussian-eps-converted-to.pdf, id=93, 422.57875pt x 27
+0.00874pt>
+File: figures/WENO5_nx100_t20_Gaussian-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use figures/WENO5_nx100_t20_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx100_t20_Gaussian-eps-converted-to.pdf 
+used on input line 639.
+(pdftex.def)             Requested size: 197.29623pt x 126.06775pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx100_t20_Gaussian.eps>
+(epstopdf)                    date: 2015-08-24 11:14:31
+(epstopdf)                    size: 214180 bytes
+(epstopdf)             Output file: <figures/WENO7_nx100_t20_Gaussian-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2015-08-24 11:16:39
+(epstopdf)                    size: 16976 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx100_t20_Ga
+ussian-eps-converted-to.pdf figures/WENO7_nx100_t20_Gaussian.eps>
+(epstopdf)             \includegraphics on input line 640.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx100_t20_Gaussian-eps-converted-to.pdf, id=95, 420.57124pt x 26
+5.99374pt>
+File: figures/WENO7_nx100_t20_Gaussian-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use figures/WENO7_nx100_t20_Gaussian-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx100_t20_Gaussian-eps-converted-to.pdf 
+used on input line 640.
+(pdftex.def)             Requested size: 197.29623pt x 124.78166pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx100_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:01:45
+(epstopdf)                    size: 213988 bytes
+(epstopdf)             Output file: <figures/CIP0_nx100_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:23:44
+(epstopdf)                    size: 15416 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx100_t2-eps-
+converted-to.pdf figures/CIP0_nx100_t2.eps>
+(epstopdf)             \includegraphics on input line 653.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx100_t2-eps-converted-to.pdf, id=97, 417.56pt x 270.00874pt>
+File: figures/CIP0_nx100_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/CIP0_nx100_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx100_t2-eps-converted-to.pdf used on inp
+ut line 653.
+(pdftex.def)             Requested size: 197.29623pt x 127.57979pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx100_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:01:48
+(epstopdf)                    size: 213544 bytes
+(epstopdf)             Output file: <figures/RCIP_nx100_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:23:45
+(epstopdf)                    size: 15419 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx100_t2-eps-
+converted-to.pdf figures/RCIP_nx100_t2.eps>
+(epstopdf)             \includegraphics on input line 654.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/RCIP_nx100_t2-eps-converted-to.pdf, id=99, 415.5525pt x 266.9975pt>
+File: figures/RCIP_nx100_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/RCIP_nx100_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx100_t2-eps-converted-to.pdf used on inp
+ut line 654.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx100_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:01:49
+(epstopdf)                    size: 213548 bytes
+(epstopdf)             Output file: <figures/LDLR_nx100_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:29:06
+(epstopdf)                    size: 15690 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx100_t2-eps-
+converted-to.pdf figures/LDLR_nx100_t2.eps>
+(epstopdf)             \includegraphics on input line 658.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx100_t2-eps-converted-to.pdf, id=101, 415.5525pt x 266.9975pt>
+File: figures/LDLR_nx100_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/LDLR_nx100_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx100_t2-eps-converted-to.pdf used on inp
+ut line 658.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx100_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:01:51
+(epstopdf)                    size: 213670 bytes
+(epstopdf)             Output file: <figures/WENO3_nx100_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:29:06
+(epstopdf)                    size: 16034 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx100_t2-eps
+-converted-to.pdf figures/WENO3_nx100_t2.eps>
+(epstopdf)             \includegraphics on input line 659.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx100_t2-eps-converted-to.pdf, id=103, 415.5525pt x 266.9975pt>
+File: figures/WENO3_nx100_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO3_nx100_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx100_t2-eps-converted-to.pdf used on in
+put line 659.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx100_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:01:52
+(epstopdf)                    size: 213670 bytes
+(epstopdf)             Output file: <figures/WENO5_nx100_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:29:07
+(epstopdf)                    size: 15853 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx100_t2-eps
+-converted-to.pdf figures/WENO5_nx100_t2.eps>
+(epstopdf)             \includegraphics on input line 663.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx100_t2-eps-converted-to.pdf, id=105, 415.5525pt x 266.9975pt>
+File: figures/WENO5_nx100_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO5_nx100_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx100_t2-eps-converted-to.pdf used on in
+put line 663.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx100_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:01:54
+(epstopdf)                    size: 213670 bytes
+(epstopdf)             Output file: <figures/WENO7_nx100_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:29:07
+(epstopdf)                    size: 15785 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx100_t2-eps
+-converted-to.pdf figures/WENO7_nx100_t2.eps>
+(epstopdf)             \includegraphics on input line 664.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx100_t2-eps-converted-to.pdf, id=107, 415.5525pt x 266.9975pt>
+File: figures/WENO7_nx100_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO7_nx100_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx100_t2-eps-converted-to.pdf used on in
+put line 664.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx200_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:11
+(epstopdf)                    size: 238541 bytes
+(epstopdf)             Output file: <figures/CIP0_nx200_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:33:45
+(epstopdf)                    size: 19743 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx200_t2-eps-
+converted-to.pdf figures/CIP0_nx200_t2.eps>
+(epstopdf)             \includegraphics on input line 677.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx200_t2-eps-converted-to.pdf, id=109, 417.56pt x 270.00874pt>
+File: figures/CIP0_nx200_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/CIP0_nx200_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx200_t2-eps-converted-to.pdf used on inp
+ut line 677.
+(pdftex.def)             Requested size: 197.29623pt x 127.57979pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx200_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:14
+(epstopdf)                    size: 238095 bytes
+(epstopdf)             Output file: <figures/RCIP_nx200_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:33:46
+(epstopdf)                    size: 19645 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx200_t2-eps-
+converted-to.pdf figures/RCIP_nx200_t2.eps>
+(epstopdf)             \includegraphics on input line 678.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/RCIP_nx200_t2-eps-converted-to.pdf, id=111, 415.5525pt x 266.9975pt>
+File: figures/RCIP_nx200_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/RCIP_nx200_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx200_t2-eps-converted-to.pdf used on inp
+ut line 678.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx200_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:16
+(epstopdf)                    size: 238102 bytes
+(epstopdf)             Output file: <figures/LDLR_nx200_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:33:46
+(epstopdf)                    size: 19774 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx200_t2-eps-
+converted-to.pdf figures/LDLR_nx200_t2.eps>
+(epstopdf)             \includegraphics on input line 682.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx200_t2-eps-converted-to.pdf, id=113, 415.5525pt x 266.9975pt>
+File: figures/LDLR_nx200_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/LDLR_nx200_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx200_t2-eps-converted-to.pdf used on inp
+ut line 682.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx200_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:17
+(epstopdf)                    size: 238224 bytes
+(epstopdf)             Output file: <figures/WENO3_nx200_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:33:47
+(epstopdf)                    size: 20396 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx200_t2-eps
+-converted-to.pdf figures/WENO3_nx200_t2.eps>
+(epstopdf)             \includegraphics on input line 683.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx200_t2-eps-converted-to.pdf, id=115, 415.5525pt x 266.9975pt>
+File: figures/WENO3_nx200_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO3_nx200_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx200_t2-eps-converted-to.pdf used on in
+put line 683.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx200_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:19
+(epstopdf)                    size: 238224 bytes
+(epstopdf)             Output file: <figures/WENO5_nx200_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:33:47
+(epstopdf)                    size: 20027 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx200_t2-eps
+-converted-to.pdf figures/WENO5_nx200_t2.eps>
+(epstopdf)             \includegraphics on input line 687.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx200_t2-eps-converted-to.pdf, id=117, 415.5525pt x 266.9975pt>
+File: figures/WENO5_nx200_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO5_nx200_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx200_t2-eps-converted-to.pdf used on in
+put line 687.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx200_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:21
+(epstopdf)                    size: 238224 bytes
+(epstopdf)             Output file: <figures/WENO7_nx200_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:33:48
+(epstopdf)                    size: 19606 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx200_t2-eps
+-converted-to.pdf figures/WENO7_nx200_t2.eps>
+(epstopdf)             \includegraphics on input line 688.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx200_t2-eps-converted-to.pdf, id=119, 415.5525pt x 266.9975pt>
+File: figures/WENO7_nx200_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO7_nx200_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx200_t2-eps-converted-to.pdf used on in
+put line 688.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx200_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:04:17
+(epstopdf)                    size: 238662 bytes
+(epstopdf)             Output file: <figures/CIP0_nx200_t20-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:35:09
+(epstopdf)                    size: 20093 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx200_t20-eps
+-converted-to.pdf figures/CIP0_nx200_t20.eps>
+(epstopdf)             \includegraphics on input line 701.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx200_t20-eps-converted-to.pdf, id=121, 422.57875pt x 270.00874pt
+>
+File: figures/CIP0_nx200_t20-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/CIP0_nx200_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx200_t20-eps-converted-to.pdf used on in
+put line 701.
+(pdftex.def)             Requested size: 197.29623pt x 126.06775pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx200_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:14
+(epstopdf)                    size: 238095 bytes
+(epstopdf)             Output file: <figures/RCIP_nx200_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:33:46
+(epstopdf)                    size: 19645 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx200_t2-eps-
+converted-to.pdf figures/RCIP_nx200_t2.eps>
+(epstopdf)             \includegraphics on input line 702.
+Package epstopdf Info: Output file is already uptodate.
+File: figures/RCIP_nx200_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/RCIP_nx200_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx200_t2-eps-converted-to.pdf used on inp
+ut line 702.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx200_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:04:23
+(epstopdf)                    size: 238221 bytes
+(epstopdf)             Output file: <figures/LDLR_nx200_t20-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:35:09
+(epstopdf)                    size: 20389 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx200_t20-eps
+-converted-to.pdf figures/LDLR_nx200_t20.eps>
+(epstopdf)             \includegraphics on input line 706.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx200_t20-eps-converted-to.pdf, id=124, 420.57124pt x 266.9975pt>
+File: figures/LDLR_nx200_t20-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/LDLR_nx200_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx200_t20-eps-converted-to.pdf used on in
+put line 706.
+(pdftex.def)             Requested size: 197.29623pt x 125.25253pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx200_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:04:26
+(epstopdf)                    size: 238793 bytes
+(epstopdf)             Output file: <figures/WENO3_nx200_t20-eps-converted-to.p
+df>
+(epstopdf)                    date: 2015-08-24 09:35:10
+(epstopdf)                    size: 20134 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx200_t20-ep
+s-converted-to.pdf figures/WENO3_nx200_t20.eps>
+(epstopdf)             \includegraphics on input line 707.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx200_t20-eps-converted-to.pdf, id=126, 422.57875pt x 270.00874p
+t>
+File: figures/WENO3_nx200_t20-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO3_nx200_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx200_t20-eps-converted-to.pdf used on i
+nput line 707.
+(pdftex.def)             Requested size: 197.29623pt x 126.06775pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx200_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:04:31
+(epstopdf)                    size: 238343 bytes
+(epstopdf)             Output file: <figures/WENO5_nx200_t20-eps-converted-to.p
+df>
+(epstopdf)                    date: 2015-08-24 09:35:10
+(epstopdf)                    size: 20482 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx200_t20-ep
+s-converted-to.pdf figures/WENO5_nx200_t20.eps>
+(epstopdf)             \includegraphics on input line 711.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx200_t20-eps-converted-to.pdf, id=128, 420.57124pt x 266.9975pt
+>
+File: figures/WENO5_nx200_t20-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO5_nx200_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx200_t20-eps-converted-to.pdf used on i
+nput line 711.
+(pdftex.def)             Requested size: 197.29623pt x 125.25253pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx200_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:04:47
+(epstopdf)                    size: 238343 bytes
+(epstopdf)             Output file: <figures/WENO7_nx200_t20-eps-converted-to.p
+df>
+(epstopdf)                    date: 2015-08-24 09:35:11
+(epstopdf)                    size: 19677 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx200_t20-ep
+s-converted-to.pdf figures/WENO7_nx200_t20.eps>
+(epstopdf)             \includegraphics on input line 712.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx200_t20-eps-converted-to.pdf, id=130, 420.57124pt x 266.9975pt
+>
+File: figures/WENO7_nx200_t20-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO7_nx200_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx200_t20-eps-converted-to.pdf used on i
+nput line 712.
+(pdftex.def)             Requested size: 197.29623pt x 125.25253pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx400_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:35
+(epstopdf)                    size: 287648 bytes
+(epstopdf)             Output file: <figures/CIP0_nx400_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:34:24
+(epstopdf)                    size: 27270 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx400_t2-eps-
+converted-to.pdf figures/CIP0_nx400_t2.eps>
+(epstopdf)             \includegraphics on input line 725.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx400_t2-eps-converted-to.pdf, id=132, 417.56pt x 270.00874pt>
+File: figures/CIP0_nx400_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/CIP0_nx400_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx400_t2-eps-converted-to.pdf used on inp
+ut line 725.
+(pdftex.def)             Requested size: 197.29623pt x 127.57979pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx400_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:38
+(epstopdf)                    size: 287202 bytes
+(epstopdf)             Output file: <figures/RCIP_nx400_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:34:25
+(epstopdf)                    size: 27133 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx400_t2-eps-
+converted-to.pdf figures/RCIP_nx400_t2.eps>
+(epstopdf)             \includegraphics on input line 726.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/RCIP_nx400_t2-eps-converted-to.pdf, id=134, 415.5525pt x 266.9975pt>
+File: figures/RCIP_nx400_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/RCIP_nx400_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx400_t2-eps-converted-to.pdf used on inp
+ut line 726.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx400_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:40
+(epstopdf)                    size: 287203 bytes
+(epstopdf)             Output file: <figures/LDLR_nx400_t2-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-08-24 09:34:26
+(epstopdf)                    size: 27382 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx400_t2-eps-
+converted-to.pdf figures/LDLR_nx400_t2.eps>
+(epstopdf)             \includegraphics on input line 730.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx400_t2-eps-converted-to.pdf, id=136, 415.5525pt x 266.9975pt>
+File: figures/LDLR_nx400_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/LDLR_nx400_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx400_t2-eps-converted-to.pdf used on inp
+ut line 730.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx400_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:42
+(epstopdf)                    size: 287325 bytes
+(epstopdf)             Output file: <figures/WENO3_nx400_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:34:26
+(epstopdf)                    size: 28443 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx400_t2-eps
+-converted-to.pdf figures/WENO3_nx400_t2.eps>
+(epstopdf)             \includegraphics on input line 731.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx400_t2-eps-converted-to.pdf, id=138, 415.5525pt x 266.9975pt>
+File: figures/WENO3_nx400_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO3_nx400_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx400_t2-eps-converted-to.pdf used on in
+put line 731.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx400_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:44
+(epstopdf)                    size: 287325 bytes
+(epstopdf)             Output file: <figures/WENO5_nx400_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:34:27
+(epstopdf)                    size: 27427 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx400_t2-eps
+-converted-to.pdf figures/WENO5_nx400_t2.eps>
+(epstopdf)             \includegraphics on input line 735.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx400_t2-eps-converted-to.pdf, id=140, 415.5525pt x 266.9975pt>
+File: figures/WENO5_nx400_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO5_nx400_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx400_t2-eps-converted-to.pdf used on in
+put line 735.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx400_t2.eps>
+(epstopdf)                    date: 2015-08-24 08:02:49
+(epstopdf)                    size: 287325 bytes
+(epstopdf)             Output file: <figures/WENO7_nx400_t2-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:34:27
+(epstopdf)                    size: 27235 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx400_t2-eps
+-converted-to.pdf figures/WENO7_nx400_t2.eps>
+(epstopdf)             \includegraphics on input line 736.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx400_t2-eps-converted-to.pdf, id=142, 415.5525pt x 266.9975pt>
+File: figures/WENO7_nx400_t2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/WENO7_nx400_t2-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx400_t2-eps-converted-to.pdf used on in
+put line 736.
+(pdftex.def)             Requested size: 197.29623pt x 126.764pt.
+Package epstopdf Info: Source file: <figures/CIP0_nx400_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:03:03
+(epstopdf)                    size: 287769 bytes
+(epstopdf)             Output file: <figures/CIP0_nx400_t20-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:35:58
+(epstopdf)                    size: 27819 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/CIP0_nx400_t20-eps
+-converted-to.pdf figures/CIP0_nx400_t20.eps>
+(epstopdf)             \includegraphics on input line 749.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/CIP0_nx400_t20-eps-converted-to.pdf, id=144, 422.57875pt x 270.00874pt
+>
+File: figures/CIP0_nx400_t20-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/CIP0_nx400_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/CIP0_nx400_t20-eps-converted-to.pdf used on in
+put line 749.
+(pdftex.def)             Requested size: 197.29623pt x 126.06775pt.
+Package epstopdf Info: Source file: <figures/RCIP_nx400_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:03:07
+(epstopdf)                    size: 287321 bytes
+(epstopdf)             Output file: <figures/RCIP_nx400_t20-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:35:58
+(epstopdf)                    size: 27453 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/RCIP_nx400_t20-eps
+-converted-to.pdf figures/RCIP_nx400_t20.eps>
+(epstopdf)             \includegraphics on input line 750.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/RCIP_nx400_t20-eps-converted-to.pdf, id=146, 420.57124pt x 266.9975pt>
+File: figures/RCIP_nx400_t20-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/RCIP_nx400_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/RCIP_nx400_t20-eps-converted-to.pdf used on in
+put line 750.
+(pdftex.def)             Requested size: 197.29623pt x 125.25253pt.
+Package epstopdf Info: Source file: <figures/LDLR_nx400_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:03:15
+(epstopdf)                    size: 287322 bytes
+(epstopdf)             Output file: <figures/LDLR_nx400_t20-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-08-24 09:35:59
+(epstopdf)                    size: 28272 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/LDLR_nx400_t20-eps
+-converted-to.pdf figures/LDLR_nx400_t20.eps>
+(epstopdf)             \includegraphics on input line 754.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/LDLR_nx400_t20-eps-converted-to.pdf, id=148, 420.57124pt x 266.9975pt>
+File: figures/LDLR_nx400_t20-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/LDLR_nx400_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/LDLR_nx400_t20-eps-converted-to.pdf used on in
+put line 754.
+(pdftex.def)             Requested size: 197.29623pt x 125.25253pt.
+Package epstopdf Info: Source file: <figures/WENO3_nx400_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:03:19
+(epstopdf)                    size: 287444 bytes
+(epstopdf)             Output file: <figures/WENO3_nx400_t20-eps-converted-to.p
+df>
+(epstopdf)                    date: 2015-08-24 09:35:59
+(epstopdf)                    size: 29021 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO3_nx400_t20-ep
+s-converted-to.pdf figures/WENO3_nx400_t20.eps>
+(epstopdf)             \includegraphics on input line 755.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO3_nx400_t20-eps-converted-to.pdf, id=150, 420.57124pt x 266.9975pt
+>
+File: figures/WENO3_nx400_t20-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO3_nx400_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO3_nx400_t20-eps-converted-to.pdf used on i
+nput line 755.
+(pdftex.def)             Requested size: 197.29623pt x 125.25253pt.
+Package epstopdf Info: Source file: <figures/WENO5_nx400_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:03:30
+(epstopdf)                    size: 287444 bytes
+(epstopdf)             Output file: <figures/WENO5_nx400_t20-eps-converted-to.p
+df>
+(epstopdf)                    date: 2015-08-24 09:36:00
+(epstopdf)                    size: 28078 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO5_nx400_t20-ep
+s-converted-to.pdf figures/WENO5_nx400_t20.eps>
+(epstopdf)             \includegraphics on input line 759.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO5_nx400_t20-eps-converted-to.pdf, id=152, 420.57124pt x 266.9975pt
+>
+File: figures/WENO5_nx400_t20-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO5_nx400_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO5_nx400_t20-eps-converted-to.pdf used on i
+nput line 759.
+(pdftex.def)             Requested size: 197.29623pt x 125.25253pt.
+Package epstopdf Info: Source file: <figures/WENO7_nx400_t20.eps>
+(epstopdf)                    date: 2015-08-24 08:04:09
+(epstopdf)                    size: 287444 bytes
+(epstopdf)             Output file: <figures/WENO7_nx400_t20-eps-converted-to.p
+df>
+(epstopdf)                    date: 2015-08-24 09:36:00
+(epstopdf)                    size: 27577 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/WENO7_nx400_t20-ep
+s-converted-to.pdf figures/WENO7_nx400_t20.eps>
+(epstopdf)             \includegraphics on input line 760.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/WENO7_nx400_t20-eps-converted-to.pdf, id=154, 420.57124pt x 266.9975pt
+>
+File: figures/WENO7_nx400_t20-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/WENO7_nx400_t20-eps-converted-to.pdf>
+Package pdftex.def Info: figures/WENO7_nx400_t20-eps-converted-to.pdf used on i
+nput line 760.
+(pdftex.def)             Requested size: 197.29623pt x 125.25253pt.
+ (./CIP.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[7 <./figures/NormL1_Sinusoidal-eps-converted-to.pdf> <./figures/NormLinf_Sinus
+oidal-eps-converted-to.pdf>] [8 <./figures/NormL1_Gaussian-eps-converted-to.pdf
+> <./figures/NormLinf_Gaussian-eps-converted-to.pdf> <./figures/CIP0_nx100_t2_S
+ine-eps-converted-to.pdf> <./figures/RCIP_nx100_t2_Sine-eps-converted-to.pdf> <
+./figures/LDLR_nx100_t2_Sine-eps-converted-to.pdf> <./figures/WENO3_nx100_t2_Si
+ne-eps-converted-to.pdf> <./figures/WENO5_nx100_t2_Sine-eps-converted-to.pdf> <
+./figures/WENO7_nx100_t2_Sine-eps-converted-to.pdf>] [9 <./figures/CIP0_nx100_t
+20_Sine-eps-converted-to.pdf> <./figures/RCIP_nx100_t20_Sine-eps-converted-to.p
+df> <./figures/LDLR_nx100_t20_Sine-eps-converted-to.pdf> <./figures/WENO3_nx100
+_t20_Sine-eps-converted-to.pdf> <./figures/WENO5_nx100_t20_Sine-eps-converted-t
+o.pdf> <./figures/WENO7_nx100_t20_Sine-eps-converted-to.pdf>] [10 <./figures/CI
+P0_nx100_t2_Gaussian-eps-converted-to.pdf> <./figures/RCIP_nx100_t2_Gaussian-ep
+s-converted-to.pdf> <./figures/LDLR_nx100_t2_Gaussian-eps-converted-to.pdf> <./
+figures/WENO3_nx100_t2_Gaussian-eps-converted-to.pdf> <./figures/WENO5_nx100_t2
+_Gaussian-eps-converted-to.pdf> <./figures/WENO7_nx100_t2_Gaussian-eps-converte
+d-to.pdf>] [11 <./figures/CIP0_nx100_t20_Gaussian-eps-converted-to.pdf> <./figu
+res/RCIP_nx100_t20_Gaussian-eps-converted-to.pdf> <./figures/LDLR_nx100_t20_Gau
+ssian-eps-converted-to.pdf> <./figures/WENO3_nx100_t20_Gaussian-eps-converted-t
+o.pdf> <./figures/WENO5_nx100_t20_Gaussian-eps-converted-to.pdf> <./figures/WEN
+O7_nx100_t20_Gaussian-eps-converted-to.pdf>] [12 <./figures/CIP0_nx100_t2-eps-c
+onverted-to.pdf> <./figures/RCIP_nx100_t2-eps-converted-to.pdf> <./figures/LDLR
+_nx100_t2-eps-converted-to.pdf> <./figures/WENO3_nx100_t2-eps-converted-to.pdf>
+ <./figures/WENO5_nx100_t2-eps-converted-to.pdf> <./figures/WENO7_nx100_t2-eps-
+converted-to.pdf>] [13 <./figures/CIP0_nx200_t2-eps-converted-to.pdf> <./figure
+s/RCIP_nx200_t2-eps-converted-to.pdf> <./figures/LDLR_nx200_t2-eps-converted-to
+.pdf> <./figures/WENO3_nx200_t2-eps-converted-to.pdf> <./figures/WENO5_nx200_t2
+-eps-converted-to.pdf> <./figures/WENO7_nx200_t2-eps-converted-to.pdf>]
+[14 <./figures/CIP0_nx200_t20-eps-converted-to.pdf> <./figures/LDLR_nx200_t20-e
+ps-converted-to.pdf> <./figures/WENO3_nx200_t20-eps-converted-to.pdf> <./figure
+s/WENO5_nx200_t20-eps-converted-to.pdf> <./figures/WENO7_nx200_t20-eps-converte
+d-to.pdf>] [15 <./figures/CIP0_nx400_t2-eps-converted-to.pdf> <./figures/RCIP_n
+x400_t2-eps-converted-to.pdf> <./figures/LDLR_nx400_t2-eps-converted-to.pdf> <.
+/figures/WENO3_nx400_t2-eps-converted-to.pdf> <./figures/WENO5_nx400_t2-eps-con
+verted-to.pdf> <./figures/WENO7_nx400_t2-eps-converted-to.pdf>] [16 <./figures/
+CIP0_nx400_t20-eps-converted-to.pdf> <./figures/RCIP_nx400_t20-eps-converted-to
+.pdf> <./figures/LDLR_nx400_t20-eps-converted-to.pdf> <./figures/WENO3_nx400_t2
+0-eps-converted-to.pdf> <./figures/WENO5_nx400_t20-eps-converted-to.pdf> <./fig
+ures/WENO7_nx400_t20-eps-converted-to.pdf>] (./CIP.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1930 strings out of 493485
- 23157 string characters out of 3143526
- 80724 words of memory out of 3000000
- 5232 multiletter control sequences out of 15000+200000
- 13169 words of font info for 53 fonts, out of 3000000 for 9000
+ 3632 strings out of 493485
+ 56672 string characters out of 3143526
+ 109918 words of memory out of 3000000
+ 6793 multiletter control sequences out of 15000+200000
+ 14435 words of font info for 60 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 27i,10n,22p,946b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on CIP.pdf (8 pages, 221498 bytes).
+ 37i,10n,24p,946b,345s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb>
+Output written on CIP.pdf (16 pages, 1165559 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 1023 PDF objects out of 1200 (max. 8388607)
+ 685 compressed objects within 7 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 634 words of extra memory for PDF output out of 10000 (max. 10000000)
 

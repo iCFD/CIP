@@ -10,8 +10,42 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear; clc; close all;
 
-% Fixed Parameters
-   u = 1.0; % advection velocity
+%% Setup Plot Configuration
+% set(0,'defaultTextInterpreter','none') 
+set(0,'defaultTextInterpreter','latex')
+set(0,'DefaultTextFontName','Times',...
+'DefaultTextFontSize',18,...
+'DefaultAxesFontName','Times',...
+'DefaultAxesFontSize',18,...
+'DefaultLineLineWidth',1.5,...
+'DefaultAxesBox','on',...
+'defaultAxesLineWidth',1.5,...
+'DefaultFigureColor','w',...
+'DefaultLineMarkerSize',5.5)
+%-------------------------------------------------------------------------
+color=['k','r','g','c','m','b','y','w','none'];
+lines={'-',':','--','-.','-.',' '};
+mark=['s','+','o','x','v',' '];
+
+% Figures Saving Path
+path ='~/github/CIP/TeX/figures/';
+
+% Labels
+label_Norm1='$\log ||e||_1$';
+label_NormI='$\log ||e||_\infty$';
+label_dx='$\log_{10} N_x $';
+L1Norm='$L_1$ Norm';
+LINorm='$L_\infty$ Norm';
+
+% name (if we test any particular parameter or IC)
+%name='_Sinusoidal';
+name='_Gaussian';
+
+% plot range 
+plotrange = [10,1000,1e-13,1];
+
+%% Test Parameters
+   u = -1.0; % advection velocity
 tEnd = 2.0; % One cycle for every test
   IC = 1;   % initial condition (see CommonIC.m!)
 
@@ -22,8 +56,8 @@ cfl = [0.9,0.9,0.9,0.9,0.8,0.5,0.2]; % one CFL for every method!
 nx  = [20,40,80,160,320,640]; % number of cells to use in every test.
 
 % Number of parameters
-p1 = length(mth);
-p2 = length(nx);
+p1 = numel(mth);
+p2 = numel(nx);
 
 % Allocate space for results
 table = zeros(p2,2,p1,3);
@@ -48,25 +82,52 @@ for l = 1:p1
 end
 
 %% Plot figure with results
-figure(1)
-loglog(nx,Norm(:,1,1),'-s',...
-    nx,Norm(:,1,2),'-o',...
-    nx,Norm(:,1,3),'-h',...
-    nx,Norm(:,1,4),'-<',...
-    nx,Norm(:,1,5),'-h',...
-    nx,Norm(:,1,6),'-o',...
-    nx,Norm(:,1,7),'-s')
-legend(mlist(mth),'location','southwest'); title('L_1 norm')
-
-figure(2)
-loglog(nx,Norm(:,2,1),'-s',...
-    nx,Norm(:,2,2),'-o',...
-    nx,Norm(:,2,3),'-h',...
-    nx,Norm(:,2,4),'-<',...
-    nx,Norm(:,2,5),'-h',...
-    nx,Norm(:,2,6),'-o',...
-    nx,Norm(:,2,7),'-s')
-legend(mlist(mth),'location','southwest'); title('L_\infty norm')
+plotfigs = 1;
+if plotfigs == true
+    figure(1)
+    loglog(nx,Norm(:,1,1),'-*',...
+        nx,Norm(:,1,2),'--+',...
+        nx,Norm(:,1,3),':s',...
+        nx,Norm(:,1,4),'-.x',...
+        nx,Norm(:,1,5),'--h',...
+        nx,Norm(:,1,6),'--p',...
+        nx,Norm(:,1,7),'--o')
+    % Axis
+    axis(plotrange);
+    % Legend
+    legend(mlist(mth),'location','southwest','FontSize',12); legend('boxoff'); grid on;
+    % Title
+    title(L1Norm);
+    % Axis labels
+    ylabel(label_Norm1);
+    xlabel(label_dx);
+    % Shape ratio
+    set(gca,'dataaspectratio',[1.2 0.001 1]);
+    % Print Figure
+    print('-depsc',[path,'NormL1',name,'.eps']);
+    
+    figure(2)
+    loglog(nx,Norm(:,2,1),'-*',...
+        nx,Norm(:,2,2),'--+',...
+        nx,Norm(:,2,3),':s',...
+        nx,Norm(:,2,4),'-.x',...
+        nx,Norm(:,2,5),'--h',...
+        nx,Norm(:,2,6),'--p',...
+        nx,Norm(:,2,7),'--o')
+    % Axis
+    axis(plotrange);
+    % Legend
+    legend(mlist(mth),'location','southwest','FontSize',12); legend('boxoff'); grid on;
+    % Title
+    title(LINorm);
+    % Axis labels
+    ylabel(label_NormI);
+    xlabel(label_dx);
+    % Shape Ratio
+    set(gca,'dataaspectratio',[1.2 0.001 1]);
+    % Print Figure
+    print('-depsc',[path,'NormLinf',name,'.eps']);
+end
 
 %% Display Result
 for l = 1:p1

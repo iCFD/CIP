@@ -3,6 +3,8 @@
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}  
 \usepackage{natbib}
 \usepackage{lineno}
+\usepackage{subfigure}
+\usepackage{graphicx}
 
 % Page length commands go here in the preamble
 \setlength{\oddsidemargin}{0.10in}	% Left margin of 1 in + 0 in = 1 in
@@ -528,7 +530,242 @@ Notice in the above that we can exploit the fact
 \end{equation}
 %
 The functions $\eta^{\pm}$ have a removable singularity at zero by putting $\eta^{\pm} = \pm \frac{1}{2}$. 
- 
+
+\section{Numerical Tests}
+\label{sec:NumericalTests}
+
+the following are some numerical test on a typical linear Advection equation:
+
+\begin{figure}
+	\centering
+	\subfigure[$L_1$ Norm]{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/NormL1_Sinusoidal}} \qquad
+	\subfigure[$L_\infty$ Norm]{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/NormLinf_Sinusoidal}}
+	\caption{Order of Accuracy of methods using a periodic Sine Initial condition}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfigure[$L_1$ Norm]{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/NormL1_Gaussian}} \qquad
+	\subfigure[$L_\infty$ Norm]{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/NormLinf_Gaussian}}
+	\caption{Order of Accuracy of methods using a periodic sine initial condition}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][3cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx100_t2_Sine}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx100_t2_Sine}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][3cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx100_t2_Sine}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx100_t2_Sine}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][3cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx100_t2_Sine}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx100_t2_Sine}}
+    \end{minipage}
+    %
+    \caption{
+    Advection of a periodic sine function at time $t=2.0$ with using $N_x=100$ cells.
+    }
+	\label{fig:SineWaveNx100t2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][3cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx100_t20_Sine}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx100_t20_Sine}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][3cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx100_t20_Sine}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx100_t20_Sine}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][3cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx100_t20_Sine}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx100_t20_Sine}}
+    \end{minipage}
+    %
+    \caption{
+    Advection of a periodic sine function at time $t=2.0$ with using $N_x=100$ cells.
+    }
+	\label{fig:SineWaveNx100t20}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx100_t2_Gaussian}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx100_t2_Gaussian}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx100_t2_Gaussian}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx100_t2_Gaussian}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx100_t2_Gaussian}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx100_t2_Gaussian}}
+    \end{minipage}
+    %
+    \caption{
+    Advection of a periodic sine function at time $t=2.0$ with using $N_x=100$ cells.
+    }
+	\label{fig:GaussianWaveNx100t2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx100_t20_Gaussian}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx100_t20_Gaussian}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx100_t20_Gaussian}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx100_t20_Gaussian}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx100_t20_Gaussian}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx100_t20_Gaussian}}
+    \end{minipage}
+    %
+    \caption{
+    Advection of a periodic Guassian Jump at time $t=20.0$ with using $N_x=100$ cells.
+    }
+	\label{fig:GuassianWaveNx100t20}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx100_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx100_t2}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx100_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx100_t2}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx100_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx100_t2}}
+    \end{minipage}
+    %
+    \caption{
+    Solutions at time $t=2.0$ with using $N_x=100$ cells.
+    }
+	\label{fig:nx100t2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx200_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx200_t2}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx200_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx200_t2}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx200_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx200_t2}}
+    \end{minipage}
+    %
+    \caption{
+    Solutions at time $t=2.0$ with using $N_x=200$ cells.
+    }
+	\label{fig:nx200t2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx200_t20}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx200_t2}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx200_t20}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx200_t20}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx200_t20}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx200_t20}}
+    \end{minipage}
+    %
+    \caption{
+    Solutions at time $t=20.0$ with using $N_x=200$ cells.
+    }
+	\label{fig:nx200t20}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx400_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx400_t2}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx400_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx400_t2}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx400_t2}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx400_t2}}
+    \end{minipage}
+    %
+    \caption{
+    Solutions at time $t=2.0$ with using $N_x=400$ cells.
+    }
+	\label{fig:nx400t2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    %
+    \begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/CIP0_nx400_t20}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/RCIP_nx400_t20}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/LDLR_nx400_t20}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO3_nx400_t20}}
+    \end{minipage}
+    %
+	\begin{minipage}[b][4.5cm]{\textwidth} \centering
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO5_nx400_t20}}
+    		\subfigure{\includegraphics[trim = 0mm 0mm 0mm 0mm,clip,width=0.42\textwidth]{figures/WENO7_nx400_t20}}
+    \end{minipage}
+    %
+    \caption{
+    Solutions at time $t=20.0$ with using $N_x=400$ cells.
+    }
+	\label{fig:nx400t2}
+\end{figure}
+
 \section{Concluding Remarks}
 \label{sec:Conclusions}
 

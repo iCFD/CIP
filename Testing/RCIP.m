@@ -24,7 +24,7 @@ clear; %close all; clc;
 fluxfun = 'linear'; 
     cfl = 0.90;	% CFL condition.
    tEnd = 10.0;	% final time.
-     nx = 101;	% number of nodes.
+     nx = 080;	% number of nodes.
  scheme = 0;	% {0}CIP0 and {1}CPI1.
     
 % Build Mesh
@@ -87,7 +87,7 @@ while t < tEnd
     if t+dt>tEnd, dt=tEnd-t; end
     
     % Displacement
-    e = (-1)*v*dt;
+    xi = (-1)*v*dt;
         
     % Slope
     S(i) = (u(i-isign(i))-u(i))./dx(i);
@@ -114,9 +114,9 @@ while t < tEnd
     C2 = S.*alpha.*beta + (S-du)./dx - C3.*dx;
 
     % sub-functions
-    F0 = (1 + alpha.*beta.*e);
-    F1 = (C3.*e.^3 + C2.*e.^2 + C1.*e + C0);
-    F2 = (3*C3.*e.^2 + 2*C2.*e + C1);
+    F0 = (1 + alpha.*beta.*xi);
+    F1 = (C3.*xi.^3 + C2.*xi.^2 + C1.*xi + C0);
+    F2 = (3*C3.*xi.^2 + 2*C2.*xi + C1);
 
     % Interpolation functions
     u = F1./F0; du = F2./F0-alpha.*beta.*F1./F0.^2;

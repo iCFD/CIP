@@ -1,0 +1,119 @@
+Testing the sinusoidal IC with periodic BCs
+Here CFL condition has been set as: 
+
+fl = [0.9,0.9,0.9,0.9,0.8,0.5,0.2]; % one CFL for every method!
+
+for each of the methods used below (in order of apparision).
+
+Elapsed time is 0.001680 seconds.
+Elapsed time is 0.002624 seconds.
+Elapsed time is 0.004791 seconds.
+Elapsed time is 0.009780 seconds.
+Elapsed time is 0.021419 seconds.
+Elapsed time is 0.051883 seconds.
+Elapsed time is 0.001441 seconds.
+Elapsed time is 0.002516 seconds.
+Elapsed time is 0.004980 seconds.
+Elapsed time is 0.010747 seconds.
+Elapsed time is 0.025334 seconds.
+Elapsed time is 0.066353 seconds.
+Elapsed time is 0.002020 seconds.
+Elapsed time is 0.003832 seconds.
+Elapsed time is 0.008354 seconds.
+Elapsed time is 0.021486 seconds.
+Elapsed time is 0.061988 seconds.
+Elapsed time is 0.197755 seconds.
+Elapsed time is 0.014749 seconds.
+Elapsed time is 0.030378 seconds.
+Elapsed time is 0.067950 seconds.
+Elapsed time is 0.170528 seconds.
+Elapsed time is 0.469486 seconds.
+Elapsed time is 1.439170 seconds.
+Elapsed time is 0.011904 seconds.
+Elapsed time is 0.023514 seconds.
+Elapsed time is 0.048353 seconds.
+Elapsed time is 0.103973 seconds.
+Elapsed time is 0.232753 seconds.
+Elapsed time is 0.549385 seconds.
+Elapsed time is 0.039136 seconds.
+Elapsed time is 0.080745 seconds.
+Elapsed time is 0.167708 seconds.
+Elapsed time is 0.362577 seconds.
+Elapsed time is 0.845017 seconds.
+Elapsed time is 2.106478 seconds.
+Elapsed time is 0.119440 seconds.
+Elapsed time is 0.246824 seconds.
+Elapsed time is 0.525761 seconds.
+Elapsed time is 1.160058 seconds.
+Elapsed time is 2.793856 seconds.
+Elapsed time is 7.215671 seconds.
+***************************************************************
+ Method: CIP0
+***************************************************************
+ nE 	 L1-Norm 	 Degree 	 Linf-Norm 	 Degree
+ 20 	 2.64e-02 	 0.00 		 1.02e-01 	 0.00 
+ 40 	 1.33e-02 	 0.99 		 5.14e-02 	 0.99 
+ 80 	 6.66e-03 	 1.00 		 2.58e-02 	 1.00 
+160 	 3.33e-03 	 1.00 		 1.29e-02 	 1.00 
+320 	 1.67e-03 	 1.00 		 6.41e-03 	 1.00 
+640 	 8.33e-04 	 1.00 		 3.20e-03 	 1.00 
+***************************************************************
+ Method: CPI1
+***************************************************************
+ nE 	 L1-Norm 	 Degree 	 Linf-Norm 	 Degree
+ 20 	 2.45e-02 	 0.00 		 1.06e-01 	 0.00 
+ 40 	 1.20e-02 	 1.03 		 4.30e-02 	 1.30 
+ 80 	 5.76e-03 	 1.06 		 2.15e-02 	 1.00 
+160 	 2.82e-03 	 1.03 		 1.07e-02 	 1.00 
+320 	 1.40e-03 	 1.01 		 5.35e-03 	 1.00 
+640 	 6.98e-04 	 1.01 		 2.67e-03 	 1.00 
+***************************************************************
+ Method: RCIP
+***************************************************************
+ nE 	 L1-Norm 	 Degree 	 Linf-Norm 	 Degree
+ 20 	 3.36e-03 	 0.00 		 1.59e-02 	 0.00 
+ 40 	 4.03e-04 	 3.06 		 2.15e-03 	 2.89 
+ 80 	 4.71e-05 	 3.10 		 2.48e-04 	 3.11 
+160 	 5.65e-06 	 3.06 		 2.96e-05 	 3.07 
+320 	 6.88e-07 	 3.04 		 3.59e-06 	 3.04 
+640 	 8.49e-08 	 3.02 		 4.42e-07 	 3.02 
+***************************************************************
+ Method: LDLR
+***************************************************************
+ nE 	 L1-Norm 	 Degree 	 Linf-Norm 	 Degree
+ 20 	 7.36e-02 	 0.00 		 3.00e-01 	 0.00 
+ 40 	 2.30e-02 	 1.68 		 1.36e-01 	 1.14 
+ 80 	 4.50e-03 	 2.36 		 4.50e-02 	 1.60 
+160 	 7.03e-04 	 2.68 		 1.32e-02 	 1.77 
+320 	 1.19e-04 	 2.56 		 3.76e-03 	 1.81 
+640 	 1.91e-05 	 2.64 		 1.03e-03 	 1.86 
+***************************************************************
+ Method: WENO3
+***************************************************************
+ nE 	 L1-Norm 	 Degree 	 Linf-Norm 	 Degree
+ 20 	 1.13e-01 	 0.00 		 4.25e-01 	 0.00 
+ 40 	 4.99e-02 	 1.18 		 2.60e-01 	 0.71 
+ 80 	 1.56e-02 	 1.67 		 1.23e-01 	 1.08 
+160 	 4.49e-03 	 1.80 		 5.12e-02 	 1.27 
+320 	 8.51e-04 	 2.40 		 1.64e-02 	 1.65 
+640 	 1.17e-04 	 2.87 		 3.75e-03 	 2.13 
+***************************************************************
+ Method: WENO5
+***************************************************************
+ nE 	 L1-Norm 	 Degree 	 Linf-Norm 	 Degree
+ 20 	 3.63e-02 	 0.00 		 1.75e-01 	 0.00 
+ 40 	 3.41e-03 	 3.41 		 1.91e-02 	 3.20 
+ 80 	 2.05e-04 	 4.05 		 1.03e-03 	 4.22 
+160 	 7.28e-06 	 4.82 		 4.35e-05 	 4.56 
+320 	 2.28e-07 	 5.00 		 1.53e-06 	 4.83 
+640 	 6.85e-09 	 5.06 		 4.96e-08 	 4.95 
+***************************************************************
+ Method: WENO7
+***************************************************************
+ nE 	 L1-Norm 	 Degree 	 Linf-Norm 	 Degree
+ 20 	 1.58e-02 	 0.00 		 8.00e-02 	 0.00 
+ 40 	 7.75e-04 	 4.35 		 5.01e-03 	 4.00 
+ 80 	 1.33e-05 	 5.87 		 1.45e-04 	 5.11 
+160 	 2.17e-07 	 5.94 		 3.90e-06 	 5.22 
+320 	 3.33e-09 	 6.02 		 1.06e-07 	 5.20 
+640 	 4.74e-11 	 6.13 		 2.88e-09 	 5.20 

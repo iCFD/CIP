@@ -104,8 +104,7 @@ while t < tEnd
     u=un; du=dun;
     
     % Periodic Boundary Conditions
-    %u(1)=u(nx); du(1)=du(nx);
-    u(nx)=u(1); du(nx)=du(1);
+    if v(1)>0; u(1)=u(nx); du(1)=du(nx); else u(nx)=u(1); du(nx)=du(1); end
     
     % Increment time
     t=t+dt;

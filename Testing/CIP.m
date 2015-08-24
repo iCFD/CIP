@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 Solving 1-D wave equation with 
-%       Rational constrained interpolation profile (RCIP) schemes
+%           constrained interpolation profile (CIP) schemes
 %
 %               du/dt + df/dx = S(x),  for x \in [a,b]
 %               where f = v(x,t)*f: linear/quasilinear
@@ -21,21 +21,21 @@
 clear; %close all; clc;
 
 %% Parameters
-fluxfun = 'linear'; 
+fluxfun = 'scalar'; 
     cfl = 0.90;	% CFL condition.
-   tEnd = 10.0;	% final time.
+   tEnd = 10;	% final time.
      nx = 101;	% number of nodes.
- scheme = 0;	% {0}CIP0 and {1}CPI1.
+ scheme = 1;	% {0}CIP0 and {1}CPI1.
     
 % Build Mesh
 a=-1; b=1; dx=(b-a)/(nx-1); x=a:dx:b; 
 
 % Define Velocity Field functions
 switch fluxfun
+    case 'scalar'
+        advect = @(x) 2;
     case 'linear'
-        advect = @(x) +2*ones(size(x));
-    case 'sine'
-        advect = @(x) 1.5+cos(pi*x);
+        advect = @(x) x;
 end
 
 % Build discrete velocity field
@@ -47,7 +47,7 @@ switch ICcase
     case 1 % Testing IC
         u0=TestingIC(x);  % Jiang and Shu IC
     case 2 % Guassian IC
-        u0=CommonIC(x,9); % cases 1-9 <- check them out!
+        u0=CommonIC(x,3); % cases 1-9 <- check them out!
     otherwise
         error('IC file not listed');
 end
@@ -58,7 +58,7 @@ du0=gradient(u0,dx);
 ue=u0;
 
 % Set plot range
-d=0.1; plotrange=[a,b,min(u0)-d,max(u0)+d];
+dl=0.1; plotrange=[a,b,min(u0)-dl,max(u0)+dl];
 
 %% Solver Loop
 
@@ -66,66 +66,45 @@ d=0.1; plotrange=[a,b,min(u0)-d,max(u0)+d];
 dt0=cfl*dx/max(abs(v(:)));
 
 % Set initial time & load IC
-t=0; u=u0; du=du0; vsgn=sign(v); it=0; dt=dt0; 
+t=0; u=u0; it=0; dt=dt0; du=du0; vsgn=sign(v);
 
-% indexes
-isign = (v>=0) + (-1)*(v<=0);
-i = 2:nx-1;
-
-% initialized arrays
-S = zeros(1,nx);
-alpha = ones(1,nx);
-dx = zeros(1,nx);
-
-% costum cell sizes
-dx(i) = x(i-isign(i)) - x(i);
-dx(1) = abs(dx(2))*(-1)*isign(1);
-dx(nx) = abs(dx(nx-1))*(-1)*isign(nx);
-
-while t < tEnd 
+while t < tEnd
     % Correction for final time step
     if t+dt>tEnd, dt=tEnd-t; end
     
-    % Displacement
-    e = (-1)*v*dt;
-        
-    % Slope
-    S(i) = (u(i-isign(i))-u(i))./dx(i);
-    S(1) = ( (isign(1)==1).*u(nx) + (isign(1)==-1).*u(2) - u(1))./dx(1);
-    S(nx) = ( (isign(nx)==1).*u(nx-1) + (isign(nx)==-1).*u(1) - u(1))./dx(nx);
+    % physical displacement
+    xi=vsgn.*v*dt;
     
-    % Beta coef
-    beta = zeros(1,nx);
-    for j=2:nx-1
-        if(du(j-isign(j))*du(j)<0)
-            beta(j) = (abs((S(j)-du(j))./(du(j-isign(j))-S(j))) - 1)./dx(j);
+    % Displace info wrt to v
+    up=circshift(u,[0,vsgn]); dup=circshift(du,[0,vsgn]);
+       
+    % Compute CIP coeficients
+    c1= (du+dup)/dx^2 + 2*(u-up)/dx^3;
+    c2= 3*(up-u)/dx^2 - (2*du+dup)/dx;
+    
+    % Build F(x) and F'(x) polynomials
+    un= ((c1.*xi+c2).*xi+du).*xi + u;
+    dun= (3*c1.*xi+2*c2).*xi + du;
+    
+    % Monitonization for u by Oleg
+    if scheme==1
+        for k = 1:nx
+            if un(k) > max(up(k),u(k))
+                un(k) = max(up(k),u(k));
+            elseif un(k) < min(up(k),u(k))
+                un(k) = min(up(k),u(k));
+            end
         end
     end
-
-    % Interpolation Coefs
-    C0 = u;
-    C1 = du + u.*alpha.*beta;
-    C3 = zeros(1,nx);
-    C3(i) = (du(i)-S(i) + (du(i-isign(i))-S(i)).*(1 + alpha(i).*beta(i).*dx(i)) )./dx(i).^2;
-    C3(1) = (du(1)-S(1) + ((isign(1)==1).*du(nx) + (isign(1)==-1).*du(2) -S(1)).* ...
-        (1 + alpha(1).*beta(1).*dx(1)) )./dx(1).^2;
-    C3(nx) = (du(nx)-S(nx) + ((isign(nx)==1).*du(nx-1) + (isign(nx)==-1).*du(1)-S(nx)).* ...
-        (1 + alpha(nx).*beta(nx).*dx(nx)) )./dx(nx).^2;
-    C2 = S.*alpha.*beta + (S-du)./dx - C3.*dx;
-
-    % sub-functions
-    F0 = (1 + alpha.*beta.*e);
-    F1 = (C3.*e.^3 + C2.*e.^2 + C1.*e + C0);
-    F2 = (3*C3.*e.^2 + 2*C2.*e + C1);
-
-    % Interpolation functions
-    u = F1./F0; du = F2./F0-alpha.*beta.*F1./F0.^2;
+    
+    % Update 
+    u=un; du=dun;
     
     % Periodic Boundary Conditions
     if v(1)>0; u(1)=u(nx); du(1)=du(nx); else u(nx)=u(1); du(nx)=du(1); end
     
-    % Increment time and counter
-    t=t+dt; it=it+1;
+    % Increment time and iteration counter
+    t=t+dt; it=it+1; 
     
     % Plot u
     if rem(it,10)==0

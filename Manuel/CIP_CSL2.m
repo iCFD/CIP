@@ -28,6 +28,7 @@ fluxfun = 'linear';
     
 % Build Mesh
 a=-1; b=1; x=linspace(a,b,nx)'; dx=x(2:nx)-x(1:nx-1); xc=x(1:nx-1)+dx/2;
+%a=-1; b=1; dx=(b-a)/(nx-1); x=a:dx:b; xc=a+dx/2:dx:b; 
 
 % Define Velocity Field functions
 switch fluxfun

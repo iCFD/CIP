@@ -104,7 +104,7 @@ while t < tEnd
     c(i) = (-1.5./(dxi(i).^3)).*( 4.0*(2.0*u(iup)+3.0*u(i)).*dxi(i)- (du(iup)-3.0*du(i)).*(dxi(i).^2) + 20.0*vsgn(i).*r(ic));
 
 	% flux crossing the cells faces
-    dr(i)  = (-1)*(e5(i).*a(i)/5 + e4(i).*b(i)/4 + e3(i).*c(i)/3  + e2(i).*du(i)/2  + e(i).*u(i));
+    dr(i)= (-1)*(e5(i).*a(i)/5 + e4(i).*b(i)/4 + e3(i).*c(i)/3  + e2(i).*du(i)/2  + e(i).*u(i));
     
     % mass of the next time step
     r(2:(nx-2)) = r(2:(nx-2)) + dr(2:(nx-2))' - dr(3:(nx-1))';

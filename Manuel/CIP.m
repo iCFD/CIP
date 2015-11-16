@@ -33,7 +33,7 @@ a=-1; b=1; dx=(b-a)/(nx-1); x=a:dx:b;
 % Define Velocity Field functions
 switch fluxfun
     case 'scalar'
-        advect = @(x) -2;
+        advect = @(x) +2;
     case 'linear'
         advect = @(x) x;
 end
